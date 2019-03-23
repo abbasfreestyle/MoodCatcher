@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
 });
 
 type Props = {};
+
 // eslint-disable-next-line
 export default class App extends Component<Props> {
   render() {
