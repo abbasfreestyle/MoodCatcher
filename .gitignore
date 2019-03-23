@@ -1,2 +1,14 @@
-# Node Modules
+# Node JS
 node_modules/
+npm-debug.log
+yarn-error.log
+
+# Android/IntelliJ
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# Jest coverage
+coverage/

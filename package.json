@@ -3,25 +3,81 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "android": "react-native run-android",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "lint": "eslint ."
+    "ios:cache-clean": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && npm cache verify && npm install",
+    "ios:deep-clean": "npm run ios:cache-clean && npm run ios:remove-folders",
+    "lint-staged": "lint-staged",
+    "packager:clear-cache": "npm start -- --reset-cache",
+    "test:all": "jest --watchAll",
+    "test:push": "jest",
+    "test": "jest --watch"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "pre-push": "npm run test:push"
+    }
+  },
+  "jest": {
+    "preset": "react-native",
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      ".+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup/setup-tests.js"
+    ],
+    "globals": {
+      "window": true
+    }
   },
   "dependencies": {
+    "lottie-react-native": "2.6.0",
+    "moment": "2.24.0",
+    "prop-types": "15.7.2",
     "react": "16.8.3",
-    "react-native": "0.59.1"
+    "react-native": "0.59.1",
+    "react-native-gesture-handler": "1.1.0",
+    "react-native-linear-gradient": "2.5.4",
+    "react-native-slider": "0.11.0",
+    "react-native-vector-icons": "6.4.2",
+    "react-navigation": "3.5.1",
+    "react-redux": "6.0.1",
+    "redux": "4.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.4.0",
     "@babel/runtime": "7.4.2",
     "@react-native-community/eslint-config": "0.0.3",
+    "babel-eslint": "10.0.1",
     "babel-jest": "24.5.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
+    "enzyme-to-json": "3.3.5",
     "eslint": "5.15.3",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-native": "3.6.0",
+    "husky": "1.3.1",
     "jest": "24.5.0",
+    "jest-cli": "24.5.0",
+    "jest-enzyme": "7.0.2",
+    "lint-staged": "^8.1.5",
     "metro-react-native-babel-preset": "0.53.1",
+    "prettier": "1.16.4",
+    "react-dom": "16.8.5",
     "react-test-renderer": "16.8.3"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }
