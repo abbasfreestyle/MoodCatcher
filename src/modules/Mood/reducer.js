@@ -1,0 +1,27 @@
+import actionTypes from './actionTypes';
+
+const initialState = {
+  mood: 5,
+  feelings: [],
+  comment: ''
+};
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case actionTypes.SET_MOOD:
+      return { ...state, mood: action.payload.mood };
+    case actionTypes.ADD_FEELING:
+      return {
+        ...state,
+        feelings: [...state.feelings, action.payload.feeling]
+      };
+    case actionTypes.REMOVE_FEELING:
+      return { ...state, feelings: action.payload.feelings };
+    case actionTypes.UPDATE_COMMENT:
+      return { ...state, comment: action.payload.comment };
+    case actionTypes.RESET_EVERYTHING:
+      return initialState;
+    default:
+      return state;
+  }
+};
