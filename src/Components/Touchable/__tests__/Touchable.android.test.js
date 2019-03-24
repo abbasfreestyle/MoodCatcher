@@ -2,7 +2,6 @@ import React from 'react';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import theme from 'theme';
 import Touchable from '..';
 
 jest.mock('Platform', () => ({ OS: 'android' }));
@@ -32,7 +31,7 @@ describe('Touchable Android.', () => {
       expect(toJson(wrapper)).toMatchSnapshot();
     });
     test('should match when android rippleColor is changed', () => {
-      wrapper.setProps({ rippleColor: theme.onPrimary });
+      wrapper.setProps({ rippleColor: 'pink' });
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });

@@ -3,7 +3,7 @@
 exports[`Touchable Android. Snapshots. should match default props. 1`] = `
 Object {
   "borderRadius": 0,
-  "rippleColor": "#323C48",
+  "rippleColor": "white",
 }
 `;
 

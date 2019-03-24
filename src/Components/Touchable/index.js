@@ -9,8 +9,6 @@ import {
   TouchableWithoutFeedback
 } from 'react-native';
 
-import theme from 'theme';
-
 const isIos = Platform.OS === 'ios';
 
 const styles = StyleSheet.create({
@@ -39,7 +37,7 @@ const Touchable = ({ children, borderRadius, rippleColor, ...props }) => {
 
 Touchable.defaultProps = {
   borderRadius: 0,
-  rippleColor: theme.onSurface
+  rippleColor: 'white'
 };
 
 Touchable.propTypes = {
