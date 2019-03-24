@@ -5,9 +5,9 @@ export const setMood = mood => ({
   payload: { mood }
 });
 
-export const addFeeling = (feeling, id) => ({
+export const addFeeling = feeling => ({
   type: actionTypes.ADD_FEELING,
-  payload: { id, feeling }
+  payload: { feeling }
 });
 
 export const removeFeeling = id => ({

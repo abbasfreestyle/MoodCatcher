@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { View, Text, StyleSheet } from 'react-native';
+import { FlatList, View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import Slider from 'react-native-slider';
 
 import { selectMood, selectFeelings } from 'modules/Mood/selectors';
 import { setMood, addFeeling, removeFeeling } from 'modules/Mood/actions';
+import Feeling from 'modules/Mood/components/Feeling';
 
 import { Button, Grid } from 'components';
 
@@ -32,7 +33,7 @@ class SelectMoodScreen extends Component {
   };
 
   render() {
-    const { mood, navigation, onSetMood } = this.props;
+    const { mood, feelings, navigation, onSetMood } = this.props;
 
     return (
       <View style={styles.container}>
@@ -57,11 +58,14 @@ class SelectMoodScreen extends Component {
               // }}
             />
           </Grid.Row>
-          {feelingsList.map(feeling => (
-            <Text>{feeling.name}</Text>
-          ))}
+          <FlatList
+            keyExtractor={item => `${item.id}`}
+            data={feelingsList}
+            renderItem={({ item }) => <Feeling feeling={item} />}
+          />
         </Grid.Column>
         <Button.Regular
+          disabled={!feelings.length}
           onPress={() => navigation.navigate('AddComment')}
           flex
           margin={10}

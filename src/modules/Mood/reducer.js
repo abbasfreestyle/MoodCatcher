@@ -13,13 +13,7 @@ export default (state = initialState, action) => {
     case actionTypes.ADD_FEELING:
       return {
         ...state,
-        feelings: [
-          ...state.feelings,
-          {
-            id: action.payload.id,
-            feeling: action.payload.feeling
-          }
-        ]
+        feelings: [...state.feelings, action.payload.feeling]
       };
     case actionTypes.REMOVE_FEELING: {
       const feelings = state.feelings.filter(

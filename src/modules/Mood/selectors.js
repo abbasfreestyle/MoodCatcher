@@ -17,3 +17,15 @@ export const selectComment = createSelector(
   selectMoodState,
   state => state.comment
 );
+
+export const selectFeeling = createSelector(
+  [selectMoodState, (state, id) => id],
+  (state, id) => {
+    return !!state.feelings.find(feeling => {
+      // console.log('feeling', feeling);
+      // console.log('feeling.id', feeling.feeling.id);
+      // console.log('typeof id', typeof id);
+      return feeling.id === id;
+    });
+  }
+);

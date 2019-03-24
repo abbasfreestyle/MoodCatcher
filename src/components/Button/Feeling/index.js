@@ -22,34 +22,29 @@ const styles = StyleSheet.create({
   }
 });
 
-class Regular extends PureComponent {
+class Feeling extends PureComponent {
   constructor(props) {
     super(props);
-    this.color = new Animated.Value(props.disabled ? 0 : 100);
+    this.color = new Animated.Value(props.selected ? 0 : 100);
   }
 
   componentDidUpdate(prevProps) {
-    const { disabled } = this.props;
-    if (prevProps.disabled !== disabled) {
-      timing(this.color, disabled ? 0 : 100, 200).start();
+    const { selected } = this.props;
+    if (prevProps.selected !== selected) {
+      timing(this.color, selected ? 0 : 100, 200).start();
     }
   }
 
   render() {
-    const { children, onPress, disabled, flex, margin, ...props } = this.props;
+    const { children, onPress, flex, margin, ...props } = this.props;
     const backgroundColor = this.color.interpolate({
       inputRange: [0, 100],
-      outputRange: ['grey', 'purple']
+      outputRange: ['blue', 'grey']
     });
     return (
       <Grid.Row margin={margin}>
         <View flex={flex ? 1 : 0}>
-          <Touchable
-            disabled={disabled}
-            onPress={onPress}
-            borderRadius={5}
-            {...props}
-          >
+          <Touchable onPress={onPress} borderRadius={5} {...props}>
             <Animated.View
               style={[styles.container, { backgroundColor }]}
               pointerEvents="box-only"
@@ -63,19 +58,19 @@ class Regular extends PureComponent {
   }
 }
 
-Regular.defaultProps = {
+Feeling.defaultProps = {
   onPress: () => {},
   flex: false,
   margin: 0,
-  disabled: false
+  selected: false
 };
 
-Regular.propTypes = {
+Feeling.propTypes = {
   children: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
+  selected: PropTypes.bool,
   flex: PropTypes.bool,
   margin: PropTypes.number,
   onPress: PropTypes.func
 };
 
-export default Regular;
+export default Feeling;
