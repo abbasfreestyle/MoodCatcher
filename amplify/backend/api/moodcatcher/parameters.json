@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "moodcatcher",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmoodcatcher",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

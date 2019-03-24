@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Touchable Android. Snapshots. should match default props. 1`] = `
+Object {
+  "borderRadius": 0,
+  "rippleColor": "#323C48",
+}
+`;
+
+exports[`Touchable Android. Snapshots. should match when android rippleColor is changed 1`] = `
+<DummyTouchableNativeFeedback
+  background={Object {}}
+  useForeground={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 0,
+        },
+      ]
+    }
+  >
+    <Text>
+      Test Button
+    </Text>
+  </View>
+</DummyTouchableNativeFeedback>
+`;
+
+exports[`Touchable Android. Snapshots. should match when border radius is changed 1`] = `
+<DummyTouchableNativeFeedback
+  background={Object {}}
+  useForeground={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 50,
+        },
+      ]
+    }
+  >
+    <Text>
+      Test Button
+    </Text>
+  </View>
+</DummyTouchableNativeFeedback>
+`;
+
+exports[`Touchable Android. Snapshots. should match with default props provided. 1`] = `
+<DummyTouchableNativeFeedback
+  background={Object {}}
+  useForeground={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 0,
+        },
+      ]
+    }
+  >
+    <Text>
+      Test Button
+    </Text>
+  </View>
+</DummyTouchableNativeFeedback>
+`;

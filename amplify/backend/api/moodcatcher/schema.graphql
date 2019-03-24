@@ -1,0 +1,7 @@
+type Mood @model {
+  id: ID!
+  date: Int!
+  mood: Int!
+  feelings: String!
+  comment: String
+}
