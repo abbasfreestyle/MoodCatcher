@@ -13,10 +13,20 @@ export default (state = initialState, action) => {
     case actionTypes.ADD_FEELING:
       return {
         ...state,
-        feelings: [...state.feelings, action.payload.feeling]
+        feelings: [
+          ...state.feelings,
+          {
+            id: action.payload.id,
+            feeling: action.payload.feeling
+          }
+        ]
       };
-    case actionTypes.REMOVE_FEELING:
-      return { ...state, feelings: action.payload.feelings };
+    case actionTypes.REMOVE_FEELING: {
+      const feelings = state.feelings.filter(
+        feeling => feeling.id !== action.payload.id
+      );
+      return { ...state, feelings };
+    }
     case actionTypes.UPDATE_COMMENT:
       return { ...state, comment: action.payload.comment };
     case actionTypes.RESET_EVERYTHING:

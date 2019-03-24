@@ -1,8 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import PropTypes from 'prop-types';
+
+import { StyleSheet } from 'react-native';
 
 import { withAuthenticator } from 'aws-amplify-react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
+import { Button, Title } from 'components';
 
 // const theme = {
 //   container: {
@@ -30,27 +34,47 @@ const signUpConfig = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   }
 });
 
-// eslint-disable-next-line
 class App extends React.Component {
+  static navigationOptions = {
+    title: 'Welcome'
+  };
+
   render() {
+    const { navigation } = this.props;
     return (
       <LinearGradient
         style={styles.container}
         colors={['#439', '#309', '#539']}
       >
-        <View>
-          <Text>Hello Name</Text>
-          <Text>How are how you feeling?</Text>
-          <Text>Look back on my feelings</Text>
-        </View>
+        <Title>Hello Name</Title>
+        <Button.Card
+          onPress={() => {
+            navigation.navigate('SelectMood');
+          }}
+        >
+          How are how you feeling?
+        </Button.Card>
+        <Button.Card
+          onPress={() => {
+            navigation.navigate('Dashboard');
+          }}
+        >
+          Look back on my feelings
+        </Button.Card>
       </LinearGradient>
     );
   }
 }
 
-export default withAuthenticator(App, { signUpConfig, includeGreetings: true });
+App.propTypes = {
+  navigation: PropTypes.object.isRequired
+};
+
+export default withAuthenticator(App, {
+  signUpConfig
+  // includeGreetings: true
+});

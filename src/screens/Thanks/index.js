@@ -16,19 +16,22 @@ const styles = StyleSheet.create({
   }
 });
 
-class DashboardScreen extends Component {
+class ThanksScreen extends Component {
   static navigationOptions = {
     title: 'Dashboard'
   };
 
   componentDidMount() {
-    // graphQL mutation to add here
+    // graphQL query to add here
     // default state to loading
   }
 
   renderLoading() {}
 
-  renderSuccess() {}
+  renderSuccess() {
+    const { onResetEverything } = this.props;
+    onResetEverything();
+  }
 
   renderError() {}
 
@@ -37,13 +40,9 @@ class DashboardScreen extends Component {
 
     // Add loading state
 
-    // add sign out button
+    // if success, clear mood
 
-    // add circle
-
-    // add list
-
-    // add chart
+    // if error, keep mood and add a button to back to beginning
     return (
       <View style={styles.container}>
         <Text>Success!</Text>
@@ -59,7 +58,7 @@ class DashboardScreen extends Component {
   }
 }
 
-DashboardScreen.propTypes = {
+ThanksScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
   onResetEverything: PropTypes.func.isRequired
 };
@@ -71,4 +70,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps
-)(DashboardScreen);
+)(ThanksScreen);
