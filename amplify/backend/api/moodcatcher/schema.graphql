@@ -1,13 +1,13 @@
 type Mood @model {
   id: ID!
-  date: Int!
+  date: String!
   mood: Int!
-  feelings: [Feeling!]! @connection(name: "Feelings")
+  feelings: [Feeling] @connection(name: "MoodFeeling")
   comment: String
 }
 
 type Feeling @model {
   id: ID!
-  feeling: String!
-  mood: Mood @connection(name: "Feelings")
+  name: String!
+  mood: Mood! @connection(name: "MoodFeeling")
 }

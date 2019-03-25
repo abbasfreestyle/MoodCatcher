@@ -18,14 +18,12 @@ export const selectComment = createSelector(
   state => state.comment
 );
 
+export const selectPostData = createSelector(
+  selectMoodState,
+  state => state
+);
+
 export const selectFeeling = createSelector(
   [selectMoodState, (state, id) => id],
-  (state, id) => {
-    return !!state.feelings.find(feeling => {
-      // console.log('feeling', feeling);
-      // console.log('feeling.id', feeling.feeling.id);
-      // console.log('typeof id', typeof id);
-      return feeling.id === id;
-    });
-  }
+  (state, id) => !!state.feelings.find(feeling => feeling.id === id)
 );

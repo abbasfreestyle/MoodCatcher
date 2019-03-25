@@ -11,6 +11,8 @@ import Feeling from 'modules/Mood/components/Feeling';
 
 import { Button, Grid } from 'components';
 
+import { feelingsList } from './feelings';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -24,8 +26,6 @@ const styles = StyleSheet.create({
     height: 3
   }
 });
-
-const feelingsList = [{ id: 1, name: 'Happy' }, { id: 2, name: 'Relaxed' }];
 
 class SelectMoodScreen extends Component {
   static navigationOptions = {
@@ -58,11 +58,18 @@ class SelectMoodScreen extends Component {
               // }}
             />
           </Grid.Row>
-          <FlatList
-            keyExtractor={item => `${item.id}`}
-            data={feelingsList}
-            renderItem={({ item }) => <Feeling feeling={item} />}
-          />
+          <Grid.Row alignItems="center">
+            <FlatList
+              keyExtractor={item => `${item.id}`}
+              numColumns={2}
+              data={feelingsList}
+              renderItem={({ item }) => (
+                <View flex={1}>
+                  <Feeling feeling={item} />
+                </View>
+              )}
+            />
+          </Grid.Row>
         </Grid.Column>
         <Button.Regular
           disabled={!feelings.length}

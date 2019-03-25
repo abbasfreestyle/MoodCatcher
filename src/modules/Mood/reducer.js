@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 const initialState = {
   mood: 5,
   feelings: [],
-  comment: ''
+  comment: null
 };
 
 export default (state = initialState, action) => {

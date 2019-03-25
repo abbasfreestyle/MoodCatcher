@@ -18,6 +18,8 @@ class Feeling extends Component {
 
     return (
       <Button.Feeling
+        flex
+        margin={10}
         selected={selected}
         onPress={() => {
           selected ? onRemoveFeeling(feeling.id) : onAddFeeling(feeling);

@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import moment from 'moment';
+import API, { graphqlOperation } from '@aws-amplify/api';
 
 import { resetEverything } from 'modules/Mood/actions';
+import { selectPostData } from 'modules/Mood/selectors';
+
+import { addMood, addFeeling } from 'schemes/Mutation';
 
 import { Button } from 'components';
 
@@ -21,31 +26,72 @@ class ThanksScreen extends Component {
     title: 'Dashboard'
   };
 
-  componentDidMount() {
+  state = {
+    loading: true,
+    error: false
+  };
+
+  async componentDidMount() {
     // graphQL query to add here
-    // default state to loading
+    const {
+      post: { mood, comment, feelings }
+    } = this.props;
+    const date = moment().format();
+    try {
+      const result = await API.graphql(
+        graphqlOperation(addMood, { mood, comment, date })
+      );
+      console.log('result', result);
+      if (!result.data) {
+        this.setState({ loading: false, error: true });
+      }
+      console.log('result.data.createMood.id', result.data.createMood.id);
+      feelings.forEach(async feeling => {
+        console.log('feeling', {
+          name: feeling.name,
+          feelingMoodId: result.data.createMood.id
+        });
+        await API.graphql(
+          graphqlOperation(addFeeling, {
+            name: feeling.name,
+            feelingMoodId: result.data.createMood.id
+          })
+        );
+      });
+
+      this.setState({ loading: false });
+    } catch (e) {
+      console.log('e', e);
+      this.setState({ loading: false, error: true });
+    }
   }
 
-  renderLoading() {}
+  renderLoading() {
+    return <Text>Loading</Text>;
+  }
 
   renderSuccess() {
-    const { onResetEverything } = this.props;
+    const { onResetEverything, navigation } = this.props;
     onResetEverything();
-  }
-
-  renderError() {}
-
-  render() {
-    const { navigation } = this.props;
-
-    // Add loading state
-
-    // if success, clear mood
-
-    // if error, keep mood and add a button to back to beginning
     return (
       <View style={styles.container}>
         <Text>Success!</Text>
+        <Button.Regular
+          onPress={() => navigation.navigate('Home')}
+          flex
+          margin={10}
+        >
+          Home
+        </Button.Regular>
+      </View>
+    );
+  }
+
+  renderError() {
+    const { navigation } = this.props;
+    return (
+      <View style={styles.container}>
+        <Text>Oops! Something went wrong.</Text>
         <Button.Regular
           onPress={() => navigation.navigate('SelectMood')}
           flex
@@ -56,18 +102,33 @@ class ThanksScreen extends Component {
       </View>
     );
   }
+
+  render() {
+    const { loading, error } = this.state;
+
+    if (loading) return this.renderLoading();
+
+    if (error) return this.renderError();
+
+    return this.renderSuccess();
+  }
 }
 
 ThanksScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired,
   onResetEverything: PropTypes.func.isRequired
 };
+
+const mapStateToProps = state => ({
+  post: selectPostData(state)
+});
 
 const mapDispatchToProps = dispatch => ({
   onResetEverything: () => dispatch(resetEverything())
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(ThanksScreen);

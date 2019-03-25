@@ -19,16 +19,7 @@ import { Button, Title } from 'components';
 
 const signUpConfig = {
   defaultCountryCode: '44',
-  hideDefaults: true,
-  signUpFields: [
-    {
-      label: 'Name',
-      key: 'name',
-      required: true,
-      displayOrder: 1,
-      type: 'string'
-    }
-  ]
+  hideDefaults: true
 };
 
 const styles = StyleSheet.create({

@@ -148,11 +148,6 @@ Resources:
       Schema: 
         
         -
-          Name: name
-          Required: true
-          Mutable: true
-        
-        -
           Name: email
           Required: true
           Mutable: true

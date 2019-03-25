@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import API, { graphqlOperation } from '@aws-amplify/api';
 
 import { resetEverything } from 'modules/Mood/actions';
 
-import { Button } from 'components';
+import { listMoods } from 'schemes/Query';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,21 +22,50 @@ class DashboardScreen extends Component {
     title: 'Dashboard'
   };
 
-  componentDidMount() {
+  state = {
+    error: false,
+    list: []
+  };
+
+  async componentDidMount() {
     // graphQL mutation to add here
     // default state to loading
+    try {
+      const result = await API.graphql(graphqlOperation(listMoods));
+      console.log('result', result);
+      if (!result.data) {
+        this.setState({ error: true });
+      }
+
+      this.setState({ list: result.data.listMoods.items });
+    } catch (e) {
+      console.log('e', e);
+      this.setState({ error: true });
+    }
   }
 
-  renderLoading() {}
+  renderLoading() {
+    return <Text>Loading</Text>;
+  }
 
-  renderSuccess() {}
+  renderSuccess() {
+    const { list } = this.state;
+    return list.map(item => <Text>{item.id}</Text>);
+  }
 
-  renderError() {}
+  renderError() {
+    return (
+      <View style={styles.container}>
+        <Text>Oops! Sorry, something went wrong.</Text>
+      </View>
+    );
+  }
 
   render() {
-    const { navigation } = this.props;
+    const { error, list } = this.state;
+    if (!list.length) return this.renderLoading();
 
-    // Add loading state
+    if (error) return this.renderError();
 
     // add sign out button
 
@@ -44,18 +74,7 @@ class DashboardScreen extends Component {
     // add list
 
     // add chart
-    return (
-      <View style={styles.container}>
-        <Text>Success!</Text>
-        <Button.Regular
-          onPress={() => navigation.navigate('SelectMood')}
-          flex
-          margin={10}
-        >
-          Go back to the beginning
-        </Button.Regular>
-      </View>
-    );
+    return this.renderSuccess();
   }
 }
 
