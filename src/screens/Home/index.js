@@ -19,6 +19,7 @@ class Home extends React.Component {
 
   render() {
     const { navigation, screenProps } = this.props;
+    console.log('screenProps', screenProps);
     const { username } = screenProps.authData;
     return (
       <Background>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import API, { graphqlOperation } from '@aws-amplify/api';
+import LottieView from 'lottie-react-native';
 
 import { resetEverything } from 'modules/Mood/actions';
 import { selectPostData } from 'modules/Mood/selectors';
@@ -12,6 +13,9 @@ import { selectPostData } from 'modules/Mood/selectors';
 import { addMood, addFeeling } from 'schemes/Mutation';
 
 import { Title, Button, Loading } from 'components';
+
+import success from 'assets/animations/success.json';
+import errorAnimation from 'assets/animations/error.json';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,17 +31,19 @@ class ThanksScreen extends Component {
 
   async componentDidMount() {
     const {
-      post: { mood, comment, feelings }
+      post: { mood, comment, feelings },
+      screenProps
     } = this.props;
-    const date = moment().format();
+    const { username } = screenProps.authData;
+    const date = moment().valueOf();
     try {
       const result = await API.graphql(
-        graphqlOperation(addMood, { mood, comment, date })
+        graphqlOperation(addMood, { mood, comment, date, username })
       );
       if (!result.data) {
         this.setState({ loading: false, error: true });
       }
-      feelings.forEach(async feeling => {
+      await feelings.forEach(async feeling => {
         await API.graphql(
           graphqlOperation(addFeeling, {
             name: feeling.name,
@@ -48,11 +54,16 @@ class ThanksScreen extends Component {
 
       this.setState({ loading: false });
     } catch (e) {
+      console.log('e', e);
       this.setState({ loading: false, error: true });
     }
   }
 
-  renderLoading = () => <Loading />;
+  renderLoading = () => (
+    <View flex={1} justifyContent="center" alignItems="center">
+      <Loading size={200} />
+    </View>
+  );
 
   renderSuccess() {
     const { onResetEverything, navigation } = this.props;
@@ -60,9 +71,20 @@ class ThanksScreen extends Component {
     return (
       <View style={styles.container}>
         <Title>Success</Title>
-        <Button.Regular onPress={() => navigation.navigate('Home')} margin={10}>
-          Home
-        </Button.Regular>
+        <View padding={20}>
+          <Text>Another mood added in the bank. Nice one!</Text>
+        </View>
+        <View flex={1} justifyContent="center" alignItems="center">
+          <LottieView autoPlay source={success} />
+        </View>
+        <View flex={1} alignItems="center">
+          <Button.Regular
+            onPress={() => navigation.navigate('Home')}
+            margin={10}
+          >
+            Finish
+          </Button.Regular>
+        </View>
       </View>
     );
   }
@@ -71,14 +93,22 @@ class ThanksScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <Title>Oops! Something went wrong.</Title>
-        <Button.Regular
-          onPress={() => navigation.navigate('SelectMood')}
-          flex
-          margin={10}
-        >
-          Go back to the beginning
-        </Button.Regular>
+        <Title>Oops!</Title>
+        <View padding={20}>
+          <Text>Something went wrong.</Text>
+        </View>
+        <View flex={1} justifyContent="center" alignItems="center">
+          <LottieView autoPlay source={errorAnimation} />
+        </View>
+        <View flex={1} alignItems="center">
+          <Button.Regular
+            onPress={() => navigation.navigate('SelectMood')}
+            flex
+            margin={10}
+          >
+            Back to the beginning
+          </Button.Regular>
+        </View>
       </View>
     );
   }
@@ -96,6 +126,7 @@ class ThanksScreen extends Component {
 
 ThanksScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
+  screenProps: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
   onResetEverything: PropTypes.func.isRequired
 };

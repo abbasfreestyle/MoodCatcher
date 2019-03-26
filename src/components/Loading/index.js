@@ -17,9 +17,7 @@ const styles = size =>
 
 const Loading = props => {
   const { size } = props;
-  return (
-    <LottieView source={loading} autoPlay loop style={styles(size).logo} />
-  );
+  return <LottieView source={loading} autoPlay style={styles(size).logo} />;
 };
 
 Loading.defaultProps = {

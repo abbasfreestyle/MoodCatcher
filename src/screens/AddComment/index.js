@@ -38,7 +38,7 @@ class AddCommentScreen extends PureComponent {
         >
           <TextInput
             multiline
-            placeholder="Would you like to add anything else? (optional)"
+            placeholder="Help remind yourself why you feel this way... (optional)"
             value={comment}
             onChangeText={text => {
               onUpdateComment(text);
@@ -56,7 +56,7 @@ class AddCommentScreen extends PureComponent {
             flex
             margin={10}
           >
-            submit my mood
+            Submit Mood
           </Button.Regular>
         </KeyboardAvoidingView>
       </View>

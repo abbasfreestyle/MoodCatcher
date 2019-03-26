@@ -1,6 +1,7 @@
 type Mood @model {
   id: ID!
-  date: String!
+  username: String!
+  date: AWSTimestamp!
   mood: Int!
   feelings: [Feeling] @connection(name: "MoodFeeling")
   comment: String

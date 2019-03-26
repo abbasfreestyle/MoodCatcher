@@ -30,15 +30,15 @@ const palette = {
 // };
 
 const theme = {
-  primary: palette.tuna,
+  primary: palette.wisteria,
   primaryVariant: palette.trout,
-  secondary: palette.java,
+  secondary: palette.brilliantRose,
 
   background: palette.mystic,
   surface: palette.white,
   error: palette.monza,
 
-  onPrimary: palette.java,
+  onPrimary: palette.white,
   onPrimaryAlt: palette.white,
   onPrimaryVariant: palette.iron,
   onSecondary: palette.white,

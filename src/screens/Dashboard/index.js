@@ -7,6 +7,8 @@ import API, { graphqlOperation } from '@aws-amplify/api';
 import Auth from '@aws-amplify/auth';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
+import { moodPercentage } from 'utils/mood';
+
 import { listMoods } from 'schemes/Query';
 
 import { Item, Title, Face, Grid, Loading, Button } from 'components';
@@ -31,18 +33,22 @@ class DashboardScreen extends Component {
   };
 
   async componentDidMount() {
+    const { screenProps } = this.props;
     try {
-      const result = await API.graphql(graphqlOperation(listMoods));
+      const { username } = screenProps.authData;
+      const result = await API.graphql(
+        graphqlOperation(listMoods, { username })
+      );
       const { items } = result.data.listMoods;
       const entries = items.length;
       const moodTotal = items.reduce(
         (total, current) => current.mood + total,
         0
       );
-      const averageMood = Math.round((moodTotal / (entries * 7)) * 100);
+      const averageMood = Math.round(moodPercentage(moodTotal / entries) * 100);
       this.setState({
         loading: false,
-        list: items.reverse(),
+        list: items,
         error: !result.data,
         entries,
         averageMood
@@ -52,11 +58,16 @@ class DashboardScreen extends Component {
     }
   }
 
-  renderLoading = () => <Loading />;
+  renderLoading = () => (
+    <View flex={1} justifyContent="center" alignItems="center">
+      <Loading size={200} />
+    </View>
+  );
 
   renderEmpty = () => {
     return (
       <View style={styles.container}>
+        {this.renderHeader()}
         <Text>No moods recorded :(</Text>
       </View>
     );
@@ -65,15 +76,34 @@ class DashboardScreen extends Component {
   renderError = () => {
     return (
       <View style={styles.container}>
+        {this.renderHeader()}
         <Text>Oops! Sorry, something went wrong.</Text>
       </View>
     );
   };
 
+  renderHeader() {
+    const { screenProps } = this.props;
+    return (
+      <Grid.Row justifyContent="space-between" alignItems="center">
+        <Title>Dashboard</Title>
+        <View marginRight={10}>
+          <Button.Regular
+            onPress={() => {
+              Auth.signOut().then(() => {
+                screenProps.onStateChange('signedOut', null);
+              });
+            }}
+          >
+            Sign Out
+          </Button.Regular>
+        </View>
+      </Grid.Row>
+    );
+  }
+
   render() {
     const { error, loading, list, averageMood, entries } = this.state;
-
-    const { screenProps } = this.props;
 
     if (loading) return this.renderLoading();
 
@@ -85,20 +115,7 @@ class DashboardScreen extends Component {
       <FlatList
         ListHeaderComponent={
           <View>
-            <Grid.Row justifyContent="space-between" alignItems="center">
-              <Title>Dashboard</Title>
-              <View marginRight={10}>
-                <Button.Regular
-                  onPress={() => {
-                    Auth.signOut().then(() => {
-                      screenProps.onStateChange('signedOut', null);
-                    });
-                  }}
-                >
-                  Sign Out
-                </Button.Regular>
-              </View>
-            </Grid.Row>
+            {this.renderHeader()}
             <Grid.Row justifyContent="space-evenly" alignItems="center">
               <AnimatedCircularProgress
                 size={100}
@@ -114,10 +131,9 @@ class DashboardScreen extends Component {
               </AnimatedCircularProgress>
               <Grid.Column>
                 <View>
-                  <Text>Your average mood is</Text>
-                  <Text>{averageMood}%</Text>
+                  <Title>Score {averageMood}%</Title>
                 </View>
-                <Text>{entries} mood recorded</Text>
+                <Title>mood(s) {entries}</Title>
               </Grid.Column>
             </Grid.Row>
           </View>

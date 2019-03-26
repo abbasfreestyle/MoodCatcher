@@ -1,6 +1,10 @@
 const listMoods = `
-query {
-  listMoods {
+query ($username: String!) {
+  listMoods (filter: {
+    username: {
+      eq: $username
+    }
+  }) {
     items {
       id
       date
@@ -10,10 +14,10 @@ query {
           name
         }
       }
-      mood
-      comment
-    }
+    mood
+    comment
   }
+}
 }`;
 
 export default listMoods;
