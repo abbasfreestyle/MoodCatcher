@@ -40,7 +40,7 @@ npm install
 - Staging and prod environments (project is too small)
 - Git branching management (project is too small)
 - Snapshot testing (done)
-- unit testing (done)
+- Unit testing (done)
 - Theming (done)
 - Authentication via AWS cognito (done)
 - Filter dashboard list via time (did not start)
@@ -49,7 +49,9 @@ npm install
 ### Could Have
 
 - Animation when selecting a mood (done)
-- Custom authentication pages (did not start)
+- Custom authentication pages that matched the app theme (did not start)
+- Delete Mood (did not start)
+- Edit Mood (did not start)
 
 ### Would Have
 

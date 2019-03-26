@@ -37,15 +37,6 @@ export const screensConfig = [
 
 const Screens = createStackNavigator(...screensConfig);
 
-// const theme = {
-//   container: {
-//     backgroundColor: '#539'
-//   },
-//   signInButton: {
-//     backgroundColor: '#439'
-//   }
-// };
-
 const AppContainer = createAppContainer(Screens);
 
 const AppWithAuth = withAuthenticator(props => (
