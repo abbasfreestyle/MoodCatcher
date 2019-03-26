@@ -1,7 +1,7 @@
 import actionTypes from './actionTypes';
 
 const initialState = {
-  mood: 5,
+  mood: 4,
   feelings: [],
   comment: null
 };

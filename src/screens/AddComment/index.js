@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -13,7 +13,7 @@ import { connect } from 'react-redux';
 import { selectComment } from 'modules/Mood/selectors';
 import { updateComment } from 'modules/Mood/actions';
 
-import { Button } from 'components';
+import { Title, Button } from 'components';
 
 const isIOS = Platform.OS === 'ios';
 
@@ -24,18 +24,16 @@ const styles = StyleSheet.create({
   }
 });
 
-class AddCommentScreen extends Component {
-  static navigationOptions = {
-    title: 'Add a comment'
-  };
-
+class AddCommentScreen extends PureComponent {
   render() {
     const { comment, onUpdateComment, navigation } = this.props;
 
     return (
       <View flex={1}>
+        <Title>Add a note</Title>
         <KeyboardAvoidingView
           style={styles.textArea}
+          keyboardVerticalOffset={50}
           behavior={isIOS ? 'padding' : null}
         >
           <TextInput

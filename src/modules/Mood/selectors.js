@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { NAME } from './constants';
+import { NAME } from './name';
 
 const selectMoodState = state => state[NAME];
 

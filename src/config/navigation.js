@@ -6,6 +6,10 @@ import {
   createStackNavigator
 } from 'react-navigation';
 
+import { withAuthenticator } from 'aws-amplify-react-native';
+
+import theme from 'theme';
+
 // import { setTopLevelNavigator } from 'utils/navigationService';
 
 import HomeScreen from 'screens/Home';
@@ -23,22 +27,51 @@ const Screens = createStackNavigator(
     Thanks: { screen: ThanksScreen }
   },
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: theme.primary
+      },
+      headerTintColor: theme.onPrimary
+    }
   }
 );
 
+// const theme = {
+//   container: {
+//     backgroundColor: '#539'
+//   },
+//   signInButton: {
+//     backgroundColor: '#439'
+//   }
+// };
+
+const signUpConfig = {
+  defaultCountryCode: '44',
+  hideDefaults: true
+};
+
 const AppContainer = createAppContainer(Screens);
 
-const App = () => {
-  return (
-    <SafeAreaView flex={1} backgroundColor="#EEE" forceInset={{ top: 'never' }}>
-      <AppContainer
+const AppWithAuth = withAuthenticator(
+  props => (
+    <AppContainer
+      screenProps={props}
       // ref={navigatorRef => {
       //   setTopLevelNavigator(navigatorRef);
       // }}
-      />
-    </SafeAreaView>
-  );
-};
+    />
+  ),
+  {
+    signUpConfig
+    // includeGreetings: true
+  }
+);
+
+const App = () => (
+  <SafeAreaView flex={1} backgroundColor="#FFF" forceInset={{ top: 'never' }}>
+    <AppWithAuth />
+  </SafeAreaView>
+);
 
 export default App;

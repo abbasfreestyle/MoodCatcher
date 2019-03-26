@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
 import Touchable from 'components/Touchable';
 
+import theme from 'theme';
+
 const styles = StyleSheet.create({
   button: {
     flex: 1,
-    padding: 20,
+    padding: 80,
     justifyContent: 'center'
   },
   // eslint-disable-next-line
@@ -14,13 +16,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'purple',
+    backgroundColor: theme.secondary,
     borderRadius: 20,
-    margin: 20
+    margin: 20,
+    shadowColor: theme.shadow,
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    shadowOffset: {
+      width: 0,
+      height: 2
+    }
   },
-  // eslint-disable-next-line
   text: {
-    color: 'white',
+    color: theme.onSecondary,
+    textAlign: 'center',
     fontSize: 30,
     fontWeight: '400'
   }

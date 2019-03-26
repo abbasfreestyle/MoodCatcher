@@ -1,26 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import { withAuthenticator } from 'aws-amplify-react-native';
-import LinearGradient from 'react-native-linear-gradient';
-
-import { Button, Title } from 'components';
-
-// const theme = {
-//   container: {
-//     backgroundColor: '#539'
-//   },
-//   signInButton: {
-//     backgroundColor: '#439'
-//   }
-// };
-
-const signUpConfig = {
-  defaultCountryCode: '44',
-  hideDefaults: true
-};
+import { Button, Title, Background } from 'components';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,43 +12,41 @@ const styles = StyleSheet.create({
   }
 });
 
-class App extends React.Component {
+class Home extends React.Component {
   static navigationOptions = {
-    title: 'Welcome'
+    title: 'Mood Catcher'
   };
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, screenProps } = this.props;
+    const { username } = screenProps.authData;
     return (
-      <LinearGradient
-        style={styles.container}
-        colors={['#439', '#309', '#539']}
-      >
-        <Title>Hello Name</Title>
-        <Button.Card
-          onPress={() => {
-            navigation.navigate('SelectMood');
-          }}
-        >
-          How are how you feeling?
-        </Button.Card>
-        <Button.Card
-          onPress={() => {
-            navigation.navigate('Dashboard');
-          }}
-        >
-          Look back on my feelings
-        </Button.Card>
-      </LinearGradient>
+      <Background>
+        <View style={styles.container}>
+          <Title>Hello {username}</Title>
+          <Button.Card
+            onPress={() => {
+              navigation.navigate('SelectMood');
+            }}
+          >
+            How are how you feeling?
+          </Button.Card>
+          <Button.Card
+            onPress={() => {
+              navigation.navigate('Dashboard');
+            }}
+          >
+            Look back on my feelings
+          </Button.Card>
+        </View>
+      </Background>
     );
   }
 }
 
-App.propTypes = {
-  navigation: PropTypes.object.isRequired
+Home.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  screenProps: PropTypes.object.isRequired
 };
 
-export default withAuthenticator(App, {
-  signUpConfig
-  // includeGreetings: true
-});
+export default Home;

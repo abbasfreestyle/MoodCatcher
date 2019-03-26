@@ -7,6 +7,8 @@ import { timing } from 'utils/animation';
 import Touchable from 'components/Touchable';
 import Grid from 'components/Grid';
 
+import theme from 'theme';
+
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
@@ -39,7 +41,7 @@ class Regular extends PureComponent {
     const { children, onPress, disabled, flex, margin, ...props } = this.props;
     const backgroundColor = this.color.interpolate({
       inputRange: [0, 100],
-      outputRange: ['grey', 'purple']
+      outputRange: [theme.disabled, theme.primary]
     });
     return (
       <Grid.Row margin={margin}>

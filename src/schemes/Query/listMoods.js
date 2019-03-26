@@ -1,8 +1,9 @@
 const listMoods = `
 query {
-  listMoods(limit: 10) {
+  listMoods {
     items {
       id
+      date
       feelings {
         items {
           id

@@ -3,12 +3,6 @@ import { addNameToActionTypes } from 'utils/addNameToActionTypes';
 
 import { NAME } from './name';
 
-const actionTypes = [
-  'SET_MOOD',
-  'ADD_FEELING',
-  'REMOVE_FEELING',
-  'UPDATE_COMMENT',
-  'RESET_EVERYTHING'
-];
+const actionTypes = ['SIGNED_IN', 'SIGNED_OUT'];
 
 export default addNameToActionTypes(NAME, keyMirror(actionTypes));

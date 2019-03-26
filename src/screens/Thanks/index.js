@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import API, { graphqlOperation } from '@aws-amplify/api';
@@ -11,28 +11,21 @@ import { selectPostData } from 'modules/Mood/selectors';
 
 import { addMood, addFeeling } from 'schemes/Mutation';
 
-import { Button } from 'components';
+import { Title, Button, Loading } from 'components';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    flex: 1
   }
 });
 
 class ThanksScreen extends Component {
-  static navigationOptions = {
-    title: 'Dashboard'
-  };
-
   state = {
     loading: true,
     error: false
   };
 
   async componentDidMount() {
-    // graphQL query to add here
     const {
       post: { mood, comment, feelings }
     } = this.props;
@@ -41,16 +34,10 @@ class ThanksScreen extends Component {
       const result = await API.graphql(
         graphqlOperation(addMood, { mood, comment, date })
       );
-      console.log('result', result);
       if (!result.data) {
         this.setState({ loading: false, error: true });
       }
-      console.log('result.data.createMood.id', result.data.createMood.id);
       feelings.forEach(async feeling => {
-        console.log('feeling', {
-          name: feeling.name,
-          feelingMoodId: result.data.createMood.id
-        });
         await API.graphql(
           graphqlOperation(addFeeling, {
             name: feeling.name,
@@ -61,26 +48,19 @@ class ThanksScreen extends Component {
 
       this.setState({ loading: false });
     } catch (e) {
-      console.log('e', e);
       this.setState({ loading: false, error: true });
     }
   }
 
-  renderLoading() {
-    return <Text>Loading</Text>;
-  }
+  renderLoading = () => <Loading />;
 
   renderSuccess() {
     const { onResetEverything, navigation } = this.props;
     onResetEverything();
     return (
       <View style={styles.container}>
-        <Text>Success!</Text>
-        <Button.Regular
-          onPress={() => navigation.navigate('Home')}
-          flex
-          margin={10}
-        >
+        <Title>Success</Title>
+        <Button.Regular onPress={() => navigation.navigate('Home')} margin={10}>
           Home
         </Button.Regular>
       </View>
@@ -91,7 +71,7 @@ class ThanksScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <Text>Oops! Something went wrong.</Text>
+        <Title>Oops! Something went wrong.</Title>
         <Button.Regular
           onPress={() => navigation.navigate('SelectMood')}
           flex

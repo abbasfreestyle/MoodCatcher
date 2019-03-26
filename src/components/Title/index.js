@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
+import theme from 'theme';
 
 const styles = StyleSheet.create({
   container: {
     margin: 20
   },
-  // eslint-disable-next-line
   text: {
+    color: theme.primary,
     fontWeight: '500',
-    fontSize: 30,
-    color: 'white'
+    fontSize: 30
   }
 });
 

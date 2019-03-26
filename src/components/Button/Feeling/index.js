@@ -7,15 +7,16 @@ import { timing } from 'utils/animation';
 import Touchable from 'components/Touchable';
 import Grid from 'components/Grid';
 
+import theme from 'theme';
+
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10
   },
-  // eslint-disable-next-line
   text: {
-    color: 'white',
+    color: theme.onSecondary,
     fontSize: 18,
     fontWeight: '400',
     textTransform: 'uppercase'
@@ -39,7 +40,7 @@ class Feeling extends PureComponent {
     const { children, onPress, flex, margin, ...props } = this.props;
     const backgroundColor = this.color.interpolate({
       inputRange: [0, 100],
-      outputRange: ['blue', 'grey']
+      outputRange: [theme.secondary, theme.disabled]
     });
     return (
       <Grid.Row margin={margin}>
