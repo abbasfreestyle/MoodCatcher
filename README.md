@@ -21,6 +21,24 @@ npm install
    - iOS - Open XCode, then ios/MoodCatcher.xcodeproj and press play
    - Android - `npm run android`
 
+## Troubleshooting
+
+Incase if the packager is not connecting with the device, you may need to start the packager manually. I only seem to be facing this with RN 0.59.
+
+You could do either of the following.
+
+```bash
+npm start
+```
+
+or to clear the packager cache and start it
+
+```bash
+npm run packager:clear-cache
+```
+
+and the run a device build.
+
 ## MSCW
 
 ### Must Have
