@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components. Snapshots. should match 1`] = `
+Object {
+  "Background": [Function],
+  "Button": Object {
+    "Card": [Function],
+    "Feeling": [Function],
+    "Regular": [Function],
+  },
+  "Chip": [Function],
+  "Face": [Function],
+  "Grid": Object {
+    "Column": [Function],
+    "Row": [Function],
+  },
+  "Item": Object {
+    "Activity": [Function],
+  },
+  "Loading": [Function],
+  "Title": [Function],
+  "Touchable": [Function],
+}
+`;

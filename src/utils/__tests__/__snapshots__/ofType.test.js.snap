@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils > Returning the correct types Snapshots oftype mocks should match the snapshot 1`] = `
+Object {
+  "expect": Array [
+    "object",
+    "array",
+    "string",
+    "number",
+    "undefined",
+    "boolean",
+    "null",
+    "number",
+    "number",
+  ],
+  "toTest": Array [
+    Object {
+      "object": "object",
+    },
+    Array [
+      "array",
+    ],
+    "some string",
+    0,
+    undefined,
+    false,
+    null,
+    1234,
+    0.234,
+  ],
+}
+`;

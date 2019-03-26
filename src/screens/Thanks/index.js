@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { View, Text, StyleSheet } from 'react-native';
+
 import { connect } from 'react-redux';
-import moment from 'moment';
 import API, { graphqlOperation } from '@aws-amplify/api';
 import LottieView from 'lottie-react-native';
+import moment from 'moment';
 
+import { addMood, addFeeling } from 'schemes/Mutation';
 import { resetEverything } from 'modules/Mood/actions';
 import { selectPostData } from 'modules/Mood/selectors';
 
-import { addMood, addFeeling } from 'schemes/Mutation';
-
-import { Title, Button, Loading } from 'components';
-
 import success from 'assets/animations/success.json';
 import errorAnimation from 'assets/animations/error.json';
+
+import { Title, Button, Loading } from 'components';
 
 const styles = StyleSheet.create({
   container: {
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class ThanksScreen extends Component {
+export class ThanksScreen extends Component {
   state = {
     loading: true,
     error: false
@@ -36,6 +36,8 @@ class ThanksScreen extends Component {
     } = this.props;
     const { username } = screenProps.authData;
     const date = moment().valueOf();
+
+    // Please see Readme.md in this folder
     try {
       const result = await API.graphql(
         graphqlOperation(addMood, { mood, comment, date, username })
@@ -53,8 +55,7 @@ class ThanksScreen extends Component {
       });
 
       this.setState({ loading: false });
-    } catch (e) {
-      console.log('e', e);
+    } catch {
       this.setState({ loading: false, error: true });
     }
   }

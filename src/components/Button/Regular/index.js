@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
 import { Animated, View, Text, StyleSheet } from 'react-native';
 
 import { timing } from 'utils/animation';
@@ -15,9 +16,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10
   },
-  // eslint-disable-next-line
   text: {
-    color: 'white',
+    color: theme.onSecondary,
     fontSize: 18,
     fontWeight: '400',
     textTransform: 'uppercase'
@@ -66,7 +66,6 @@ class Regular extends PureComponent {
 }
 
 Regular.defaultProps = {
-  onPress: () => {},
   flex: false,
   margin: 0,
   disabled: false
@@ -74,10 +73,10 @@ Regular.defaultProps = {
 
 Regular.propTypes = {
   children: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   flex: PropTypes.bool,
-  margin: PropTypes.number,
-  onPress: PropTypes.func
+  margin: PropTypes.number
 };
 
 export default Regular;

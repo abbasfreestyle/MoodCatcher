@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens > Select Mood > Feelints List should match snapshot of the list of feelings provided 1`] = `
+Array [
+  Object {
+    "id": "1",
+    "name": "Happy",
+  },
+  Object {
+    "id": "2",
+    "name": "Excited",
+  },
+  Object {
+    "id": "3",
+    "name": "Anxious",
+  },
+  Object {
+    "id": "4",
+    "name": "Nervous",
+  },
+  Object {
+    "id": "5",
+    "name": "Relaxed",
+  },
+]
+`;

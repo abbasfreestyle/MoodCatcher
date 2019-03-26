@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schemes > Mutation > Add Mood should match the snapshot 1`] = `
+"
+  mutation(
+    $username: String!,
+    $date: AWSTimestamp!,
+    $mood: Int!, 
+    $comment: String
+    ) {
+    createMood(input:{
+      username: $username
+      date: $date,
+      mood: $mood,
+      comment: $comment
+    }) {
+      id
+      username
+      date
+      mood
+      comment
+    }
+  }
+"
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Theme. Snapshots. should match 1`] = `
+Object {
+  "background": "#E0E7ED",
+  "disabled": "#D4D4D5",
+  "error": "#B3001E",
+  "onBackground": "#323C48",
+  "onError": "#FFFFFF",
+  "onPrimary": "#FFFFFF",
+  "onPrimaryAlt": "#FFFFFF",
+  "onPrimaryVariant": "#D4D4D5",
+  "onSecondary": "#FFFFFF",
+  "onSurface": "#323C48",
+  "primary": "#A073B2",
+  "primaryVariant": "#4A4C58",
+  "secondary": "#F26AA3",
+  "shadow": "#000000",
+  "surface": "#FFFFFF",
+}
+`;

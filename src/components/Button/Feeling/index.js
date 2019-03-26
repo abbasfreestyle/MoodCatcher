@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
 import { Animated, View, Text, StyleSheet } from 'react-native';
 
 import { timing } from 'utils/animation';
@@ -37,7 +38,7 @@ class Feeling extends PureComponent {
   }
 
   render() {
-    const { children, onPress, flex, margin, ...props } = this.props;
+    const { children, onPress, flex, margin, ...touchableProps } = this.props;
     const backgroundColor = this.color.interpolate({
       inputRange: [0, 100],
       outputRange: [theme.secondary, theme.disabled]
@@ -45,7 +46,7 @@ class Feeling extends PureComponent {
     return (
       <Grid.Row margin={margin}>
         <View flex={flex ? 1 : 0}>
-          <Touchable onPress={onPress} borderRadius={5} {...props}>
+          <Touchable onPress={onPress} borderRadius={5} {...touchableProps}>
             <Animated.View
               style={[styles.container, { backgroundColor }]}
               pointerEvents="box-only"
@@ -60,7 +61,6 @@ class Feeling extends PureComponent {
 }
 
 Feeling.defaultProps = {
-  onPress: () => {},
   flex: false,
   margin: 0,
   selected: false
@@ -68,10 +68,10 @@ Feeling.defaultProps = {
 
 Feeling.propTypes = {
   children: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
   selected: PropTypes.bool,
   flex: PropTypes.bool,
-  margin: PropTypes.number,
-  onPress: PropTypes.func
+  margin: PropTypes.number
 };
 
 export default Feeling;

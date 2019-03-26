@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -24,45 +24,43 @@ const styles = StyleSheet.create({
   }
 });
 
-class AddCommentScreen extends PureComponent {
-  render() {
-    const { comment, onUpdateComment, navigation } = this.props;
+export const AddCommentScreen = props => {
+  const { comment, onUpdateComment, navigation } = props;
 
-    return (
-      <View flex={1}>
-        <Title>Add a note</Title>
-        <KeyboardAvoidingView
-          style={styles.textArea}
-          keyboardVerticalOffset={50}
-          behavior={isIOS ? 'padding' : null}
+  return (
+    <View flex={1}>
+      <Title>Add a note</Title>
+      <KeyboardAvoidingView
+        style={styles.textArea}
+        keyboardVerticalOffset={50}
+        behavior={isIOS ? 'padding' : null}
+      >
+        <TextInput
+          multiline
+          placeholder="Help remind yourself why you feel this way... (optional)"
+          value={comment}
+          onChangeText={text => {
+            onUpdateComment(text);
+          }}
+        />
+      </KeyboardAvoidingView>
+      <KeyboardAvoidingView
+        keyboardVerticalOffset={90}
+        behavior={isIOS ? 'position' : null}
+      >
+        <Button.Regular
+          flex
+          margin={10}
+          onPress={() => {
+            navigation.navigate('Thanks');
+          }}
         >
-          <TextInput
-            multiline
-            placeholder="Help remind yourself why you feel this way... (optional)"
-            value={comment}
-            onChangeText={text => {
-              onUpdateComment(text);
-            }}
-          />
-        </KeyboardAvoidingView>
-        <KeyboardAvoidingView
-          keyboardVerticalOffset={90}
-          behavior={isIOS ? 'position' : null}
-        >
-          <Button.Regular
-            onPress={() => {
-              navigation.navigate('Thanks');
-            }}
-            flex
-            margin={10}
-          >
-            Submit Mood
-          </Button.Regular>
-        </KeyboardAvoidingView>
-      </View>
-    );
-  }
-}
+          Submit Mood
+        </Button.Regular>
+      </KeyboardAvoidingView>
+    </View>
+  );
+};
 
 AddCommentScreen.propTypes = {
   navigation: PropTypes.object.isRequired,

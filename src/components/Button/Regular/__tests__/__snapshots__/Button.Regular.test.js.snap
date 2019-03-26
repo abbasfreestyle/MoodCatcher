@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button > Regular. Snapshots. should match default props 1`] = `
+Object {
+  "disabled": false,
+  "flex": false,
+  "margin": 0,
+}
+`;
+
+exports[`Button > Regular. Snapshots. should match when disabled is true 1`] = `
+<Row
+  margin={0}
+>
+  <View
+    flex={0}
+  >
+    <Touchable
+      borderRadius={5}
+      disabled={true}
+      onPress={[MockFunction]}
+      rippleColor="white"
+    >
+      <AnimatedComponent
+        pointerEvents="box-only"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padding": 10,
+            },
+            Object {
+              "backgroundColor": "rgba(212, 212, 213, 1)",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 18,
+              "fontWeight": "400",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Happy
+        </Text>
+      </AnimatedComponent>
+    </Touchable>
+  </View>
+</Row>
+`;
+
+exports[`Button > Regular. Snapshots. should match when flex is true 1`] = `
+<Row
+  margin={0}
+>
+  <View
+    flex={1}
+  >
+    <Touchable
+      borderRadius={5}
+      disabled={false}
+      onPress={[MockFunction]}
+      rippleColor="white"
+    >
+      <AnimatedComponent
+        pointerEvents="box-only"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padding": 10,
+            },
+            Object {
+              "backgroundColor": "rgba(160, 115, 178, 1)",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 18,
+              "fontWeight": "400",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Happy
+        </Text>
+      </AnimatedComponent>
+    </Touchable>
+  </View>
+</Row>
+`;
+
+exports[`Button > Regular. Snapshots. should match when margin is different 1`] = `
+<Row
+  margin={20}
+>
+  <View
+    flex={0}
+  >
+    <Touchable
+      borderRadius={5}
+      disabled={false}
+      onPress={[MockFunction]}
+      rippleColor="white"
+    >
+      <AnimatedComponent
+        pointerEvents="box-only"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padding": 10,
+            },
+            Object {
+              "backgroundColor": "rgba(160, 115, 178, 1)",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 18,
+              "fontWeight": "400",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Happy
+        </Text>
+      </AnimatedComponent>
+    </Touchable>
+  </View>
+</Row>
+`;
+
+exports[`Button > Regular. Snapshots. should match with default props provided 1`] = `
+<Row
+  margin={0}
+>
+  <View
+    flex={0}
+  >
+    <Touchable
+      borderRadius={5}
+      disabled={false}
+      onPress={[MockFunction]}
+      rippleColor="white"
+    >
+      <AnimatedComponent
+        pointerEvents="box-only"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padding": 10,
+            },
+            Object {
+              "backgroundColor": "rgba(160, 115, 178, 1)",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 18,
+              "fontWeight": "400",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Happy
+        </Text>
+      </AnimatedComponent>
+    </Touchable>
+  </View>
+</Row>
+`;

@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 import { FlatList, View, Text, StyleSheet } from 'react-native';
 
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import API, { graphqlOperation } from '@aws-amplify/api';
 import Auth from '@aws-amplify/auth';
-import { AnimatedCircularProgress } from 'react-native-circular-progress';
-
-import { moodPercentage } from 'utils/mood';
 
 import { listMoods } from 'schemes/Query';
+import { moodPercentage } from 'utils/mood';
 
 import { Item, Title, Face, Grid, Loading, Button } from 'components';
 
@@ -23,7 +22,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class DashboardScreen extends Component {
+export class DashboardScreen extends Component {
   state = {
     loading: true,
     error: false,
@@ -36,6 +35,8 @@ class DashboardScreen extends Component {
     const { screenProps } = this.props;
     try {
       const { username } = screenProps.authData;
+
+      // Please see Readme.md in this folder
       const result = await API.graphql(
         graphqlOperation(listMoods, { username })
       );
@@ -53,7 +54,7 @@ class DashboardScreen extends Component {
         entries,
         averageMood
       });
-    } catch (e) {
+    } catch {
       this.setState({ loading: false, error: true });
     }
   }

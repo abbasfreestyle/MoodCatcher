@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { View, StyleSheet } from 'react-native';
@@ -12,19 +12,19 @@ const styles = StyleSheet.create({
   }
 });
 
-class Home extends React.Component {
+class Home extends PureComponent {
   static navigationOptions = {
     title: 'Mood Catcher'
   };
 
   render() {
     const { navigation, screenProps } = this.props;
-    console.log('screenProps', screenProps);
     const { username } = screenProps.authData;
+
     return (
       <Background>
         <View style={styles.container}>
-          <Title>Hello {username}</Title>
+          <Title>{`Hello ${username}`}</Title>
           <Button.Card
             onPress={() => {
               navigation.navigate('SelectMood');

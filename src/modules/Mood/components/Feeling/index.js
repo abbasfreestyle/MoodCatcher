@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -8,28 +8,22 @@ import { addFeeling, removeFeeling } from 'modules/Mood/actions';
 
 import { Button } from 'components';
 
-class Feeling extends Component {
-  static navigationOptions = {
-    title: 'Select Your Mood'
-  };
+export const Feeling = props => {
+  const { feeling, selected, onRemoveFeeling, onAddFeeling } = props;
 
-  render() {
-    const { feeling, selected, onRemoveFeeling, onAddFeeling } = this.props;
-
-    return (
-      <Button.Feeling
-        flex
-        margin={10}
-        selected={selected}
-        onPress={() => {
-          selected ? onRemoveFeeling(feeling.id) : onAddFeeling(feeling);
-        }}
-      >
-        {feeling.name}
-      </Button.Feeling>
-    );
-  }
-}
+  return (
+    <Button.Feeling
+      flex
+      margin={10}
+      selected={selected}
+      onPress={() => {
+        selected ? onRemoveFeeling(feeling.id) : onAddFeeling(feeling);
+      }}
+    >
+      {feeling.name}
+    </Button.Feeling>
+  );
+};
 
 Feeling.propTypes = {
   feeling: PropTypes.object.isRequired,

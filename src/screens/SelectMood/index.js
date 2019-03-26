@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FlatList, View, StyleSheet } from 'react-native';
@@ -26,57 +26,55 @@ const styles = StyleSheet.create({
   }
 });
 
-class SelectMoodScreen extends PureComponent {
-  render() {
-    const { mood, feelings, navigation, onSetMood } = this.props;
-    return (
-      <View flex={1}>
-        <Title>Select your mood</Title>
-        <FlatList
-          ListHeaderComponent={
-            <Grid.Column flex={1} margin={20} alignItems="center">
-              <View marginTop={-75} marginBottom={-50}>
-                <Face progress={moodPercentage(mood)} size={350} />
-              </View>
-              <Grid.Row>
-                <Slider
-                  value={mood}
-                  style={styles.slider}
-                  trackStyle={styles.track}
-                  minimumValue={minRange}
-                  maximumValue={maxRange}
-                  step={1}
-                  thumbTintColor={theme.secondary}
-                  minimumTrackTintColor={theme.disabled}
-                  maximumTrackTintColor={theme.primary}
-                  onValueChange={val => {
-                    onSetMood(val);
-                  }}
-                />
-              </Grid.Row>
-            </Grid.Column>
-          }
-          keyExtractor={item => `${item.id}`}
-          numColumns={2}
-          data={feelingsList}
-          renderItem={({ item }) => (
-            <View flex={1}>
-              <Feeling feeling={item} />
+export const SelectMoodScreen = props => {
+  const { mood, feelings, navigation, onSetMood } = props;
+  return (
+    <View flex={1}>
+      <Title>Select your mood</Title>
+      <FlatList
+        ListHeaderComponent={
+          <Grid.Column flex={1} margin={20} alignItems="center">
+            <View marginTop={-75} marginBottom={-50}>
+              <Face progress={moodPercentage(mood)} size={350} />
             </View>
-          )}
-        />
-        <Button.Regular
-          disabled={!feelings.length}
-          onPress={() => navigation.navigate('AddComment')}
-          flex
-          margin={10}
-        >
-          NEXT
-        </Button.Regular>
-      </View>
-    );
-  }
-}
+            <Grid.Row>
+              <Slider
+                value={mood}
+                style={styles.slider}
+                trackStyle={styles.track}
+                minimumValue={minRange}
+                maximumValue={maxRange}
+                step={1}
+                thumbTintColor={theme.secondary}
+                minimumTrackTintColor={theme.disabled}
+                maximumTrackTintColor={theme.primary}
+                onValueChange={val => {
+                  onSetMood(val);
+                }}
+              />
+            </Grid.Row>
+          </Grid.Column>
+        }
+        keyExtractor={item => item.id}
+        numColumns={2}
+        data={feelingsList}
+        renderItem={({ item }) => (
+          <View flex={1}>
+            <Feeling feeling={item} />
+          </View>
+        )}
+      />
+      <Button.Regular
+        disabled={!feelings.length}
+        onPress={() => navigation.navigate('AddComment')}
+        flex
+        margin={10}
+      >
+        NEXT
+      </Button.Regular>
+    </View>
+  );
+};
 
 SelectMoodScreen.propTypes = {
   navigation: PropTypes.object.isRequired,

@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens > Dashboard Snapshots should match when error is true 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Row
+    alignItems="center"
+    justifyContent="space-between"
+  >
+    <Title>
+      Dashboard
+    </Title>
+    <View
+      marginRight={10}
+    >
+      <Regular
+        disabled={false}
+        flex={false}
+        margin={0}
+        onPress={[Function]}
+      >
+        Sign Out
+      </Regular>
+    </View>
+  </Row>
+  <Text>
+    Oops! Sorry, something went wrong.
+  </Text>
+</View>
+`;
+
+exports[`Screens > Dashboard Snapshots should match when list is empty 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Row
+    alignItems="center"
+    justifyContent="space-between"
+  >
+    <Title>
+      Dashboard
+    </Title>
+    <View
+      marginRight={10}
+    >
+      <Regular
+        disabled={false}
+        flex={false}
+        margin={0}
+        onPress={[Function]}
+      >
+        Sign Out
+      </Regular>
+    </View>
+  </Row>
+  <Text>
+    No moods recorded :(
+  </Text>
+</View>
+`;
+
+exports[`Screens > Dashboard Snapshots should match when list is not empty 1`] = `
+<FlatList
+  ListHeaderComponent={
+    <View>
+      <Row
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Title>
+          Dashboard
+        </Title>
+        <View
+          marginRight={10}
+        >
+          <Regular
+            disabled={false}
+            flex={false}
+            margin={0}
+            onPress={[Function]}
+          >
+            Sign Out
+          </Regular>
+        </View>
+      </Row>
+      <Row
+        alignItems="center"
+        justifyContent="space-evenly"
+      >
+        <AnimatedCircularProgress
+          arcSweepAngle={270}
+          backgroundColor="#D4D4D5"
+          duration={500}
+          easing={[Function]}
+          fill={75}
+          lineCap="round"
+          prefill={0}
+          rotation={-135}
+          size={100}
+          tintColor="#A073B2"
+          width={10}
+        >
+          [Function]
+        </AnimatedCircularProgress>
+        <Column>
+          <View>
+            <Title>
+              Score 
+              75
+              %
+            </Title>
+          </View>
+          <Title>
+            mood(s) 
+            1
+          </Title>
+        </Column>
+      </Row>
+    </View>
+  }
+  data={
+    Array [
+      Object {
+        "comment": "Test comment",
+        "date": 1556146800000,
+        "feelings": Object {
+          "items": Array [
+            Object {
+              "id": 1,
+              "name": "Relaxed",
+            },
+            Object {
+              "id": 2,
+              "name": "Happy",
+            },
+          ],
+        },
+        "mood": 6,
+      },
+    ]
+  }
+  disableVirtualization={false}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onEndReachedThreshold={2}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  updateCellsBatchingPeriod={50}
+  windowSize={21}
+/>
+`;
+
+exports[`Screens > Dashboard Snapshots should match when loading is true 1`] = `
+<View
+  alignItems="center"
+  flex={1}
+  justifyContent="center"
+>
+  <Loading
+    size={200}
+  />
+</View>
+`;
+
+exports[`Screens > Dashboard Snapshots should match with default state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Row
+    alignItems="center"
+    justifyContent="space-between"
+  >
+    <Title>
+      Dashboard
+    </Title>
+    <View
+      marginRight={10}
+    >
+      <Regular
+        disabled={false}
+        flex={false}
+        margin={0}
+        onPress={[Function]}
+      >
+        Sign Out
+      </Regular>
+    </View>
+  </Row>
+  <Text>
+    Oops! Sorry, something went wrong.
+  </Text>
+</View>
+`;

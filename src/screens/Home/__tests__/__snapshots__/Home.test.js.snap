@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens > Home Snapshots should match 1`] = `
+<Background>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Title>
+      Hello Test user
+    </Title>
+    <Card
+      onPress={[Function]}
+    >
+      How are how you feeling?
+    </Card>
+    <Card
+      onPress={[Function]}
+    >
+      Look back on my feelings
+    </Card>
+  </View>
+</Background>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens > Add Comment Snapshots should match 1`] = `
+<View
+  flex={1}
+>
+  <Title>
+    Add a note
+  </Title>
+  <KeyboardAvoidingView
+    behavior="padding"
+    enabled={true}
+    keyboardVerticalOffset={50}
+    style={
+      Object {
+        "flex": 1,
+        "padding": 20,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      multiline={true}
+      onChangeText={[Function]}
+      placeholder="Help remind yourself why you feel this way... (optional)"
+      rejectResponderTermination={true}
+      underlineColorAndroid="transparent"
+      value="Test comment"
+    />
+  </KeyboardAvoidingView>
+  <KeyboardAvoidingView
+    behavior="position"
+    enabled={true}
+    keyboardVerticalOffset={90}
+  >
+    <Regular
+      disabled={false}
+      flex={true}
+      margin={10}
+      onPress={[Function]}
+    >
+      Submit Mood
+    </Regular>
+  </KeyboardAvoidingView>
+</View>
+`;

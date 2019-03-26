@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title. Snapshots. should match 1`] = `
+<View
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#A073B2",
+        "fontSize": 30,
+        "fontWeight": "500",
+      }
+    }
+  >
+    Test Title
+  </Text>
+</View>
+`;

@@ -1,6 +1,8 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
 import { View, Text, StyleSheet } from 'react-native';
+
 import Touchable from 'components/Touchable';
 
 import theme from 'theme';
@@ -11,7 +13,6 @@ const styles = StyleSheet.create({
     padding: 80,
     justifyContent: 'center'
   },
-  // eslint-disable-next-line
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -25,7 +26,8 @@ const styles = StyleSheet.create({
     shadowOffset: {
       width: 0,
       height: 2
-    }
+    },
+    elevation: 5
   },
   text: {
     color: theme.onSecondary,
@@ -35,28 +37,22 @@ const styles = StyleSheet.create({
   }
 });
 
-class Card extends PureComponent {
-  render() {
-    const { children, onPress } = this.props;
-    return (
-      <View style={styles.container}>
-        <Touchable onPress={onPress} borderRadius={20}>
-          <View style={styles.button}>
-            <Text style={styles.text}>{children}</Text>
-          </View>
-        </Touchable>
-      </View>
-    );
-  }
-}
-
-Card.defaultProps = {
-  onPress: () => {}
+const Card = props => {
+  const { children, onPress } = props;
+  return (
+    <View style={styles.container}>
+      <Touchable onPress={onPress} borderRadius={20}>
+        <View style={styles.button}>
+          <Text style={styles.text}>{children}</Text>
+        </View>
+      </Touchable>
+    </View>
+  );
 };
 
 Card.propTypes = {
   children: PropTypes.string.isRequired,
-  onPress: PropTypes.func
+  onPress: PropTypes.func.isRequired
 };
 
 export default Card;

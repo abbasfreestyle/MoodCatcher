@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { Animated, StyleSheet } from 'react-native';
@@ -9,23 +9,28 @@ import { timing } from 'utils/animation';
 
 import face from 'assets/animations/mood.json';
 
-const styles = size =>
-  StyleSheet.create({
+const styles = size => {
+  return StyleSheet.create({
     logo: {
       height: size,
       width: size
     }
   });
+};
 
-class Face extends Component {
+class Face extends PureComponent {
   progress = new Animated.Value(0.5);
 
   componentDidMount() {
-    const { progress } = this.props;
-    timing(this.progress, progress, 500).start();
+    this.animate();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
+    const { progress } = this.props;
+    if (prevProps.progress !== progress) this.animate();
+  }
+
+  animate() {
     const { progress } = this.props;
     timing(this.progress, progress, 500).start();
   }
@@ -34,10 +39,6 @@ class Face extends Component {
     const { size } = this.props;
     return (
       <LottieView
-        // ref={ref => {
-        //   this.face = ref;
-        // }}
-        loop={false}
         progress={this.progress}
         source={face}
         style={styles(size).logo}

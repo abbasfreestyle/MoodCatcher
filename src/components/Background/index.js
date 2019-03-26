@@ -15,12 +15,12 @@ const styles = StyleSheet.create({
 });
 
 const Background = props => {
-  const { children, ...rest } = props;
+  const { children, ...linearGradientProps } = props;
   return (
     <LinearGradient
       style={styles.container}
       colors={[theme.background, theme.surface]}
-      {...rest}
+      {...linearGradientProps}
     >
       {children}
     </LinearGradient>

@@ -7,14 +7,14 @@ import LottieView from 'lottie-react-native';
 
 import loading from 'assets/animations/loading.json';
 
-const styles = size =>
-  StyleSheet.create({
+const styles = size => {
+  return StyleSheet.create({
     logo: {
       height: size,
       width: size
     }
   });
-
+};
 const Loading = props => {
   const { size } = props;
   return <LottieView source={loading} autoPlay style={styles(size).logo} />;

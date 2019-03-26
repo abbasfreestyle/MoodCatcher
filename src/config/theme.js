@@ -17,18 +17,6 @@ const palette = {
   shakespeare: '#4895D0'
 };
 
-// export const hexToRgba = (hex, opacity = 1) => {
-//   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-//   const newHex = hex.replace(
-//     shorthandRegex,
-//     (m, r, g, b) => r + r + g + g + b + b
-//   );
-//   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(newHex);
-//   const color = x => parseInt(result[x], 16);
-//   const string = `rgba(${color(1)},${color(2)},${color(3)},${opacity})`;
-//   return result ? string : null;
-// };
-
 const theme = {
   primary: palette.wisteria,
   primaryVariant: palette.trout,

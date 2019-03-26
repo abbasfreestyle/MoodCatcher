@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schemes > Query > List Moods should match the snapshot 1`] = `
+"
+query ($username: String!) {
+  listMoods (filter: {
+    username: {
+      eq: $username
+    }
+  }) {
+    items {
+      id
+      date
+      feelings {
+        items {
+          id
+          name
+        }
+      }
+    mood
+    comment
+  }
+}
+}"
+`;

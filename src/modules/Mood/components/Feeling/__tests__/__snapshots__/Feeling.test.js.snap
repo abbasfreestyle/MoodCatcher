@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modules > Mood > Feeling. Snapshots. should match when selected is true 1`] = `
+<Feeling
+  flex={true}
+  margin={10}
+  onPress={[Function]}
+  selected={true}
+>
+  Relaxed
+</Feeling>
+`;
+
+exports[`Modules > Mood > Feeling. Snapshots. should match with required props 1`] = `
+<Feeling
+  flex={true}
+  margin={10}
+  onPress={[Function]}
+  selected={false}
+>
+  Relaxed
+</Feeling>
+`;

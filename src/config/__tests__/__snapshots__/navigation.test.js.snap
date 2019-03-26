@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation. Snapshots. should match 1`] = `
+Array [
+  Object {
+    "AddComment": Object {
+      "screen": [Function],
+    },
+    "Dashboard": Object {
+      "screen": [Function],
+    },
+    "Home": Object {
+      "screen": [Function],
+    },
+    "SelectMood": Object {
+      "screen": [Function],
+    },
+    "Thanks": Object {
+      "screen": [Function],
+    },
+  },
+  Object {
+    "defaultNavigationOptions": Object {
+      "headerStyle": Object {
+        "backgroundColor": "#A073B2",
+      },
+      "headerTintColor": "#FFFFFF",
+    },
+    "initialRouteName": "Home",
+  },
+]
+`;

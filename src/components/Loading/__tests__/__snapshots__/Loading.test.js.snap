@@ -1,0 +1,1471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading. Snapshots. should match default props 1`] = `
+Object {
+  "size": 75,
+}
+`;
+
+exports[`Loading. Snapshots. should match with a different size 1`] = `
+<LottieView
+  autoPlay={true}
+  autoSize={false}
+  enableMergePathsAndroidForKitKatAndAbove={false}
+  loop={true}
+  progress={0}
+  resizeMode="contain"
+  source={
+    Object {
+      "assets": Array [],
+      "ddd": 0,
+      "fr": 25,
+      "h": 200,
+      "ip": 0,
+      "layers": Array [
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 1,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "a": 0,
+              "k": Array [
+                3.481,
+                -1.019,
+                0,
+              ],
+            },
+            "o": Object {
+              "a": 1,
+              "k": Array [
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 6,
+                },
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 9,
+                },
+                Object {
+                  "e": Array [
+                    0,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 12,
+                },
+                Object {
+                  "t": 15,
+                },
+              ],
+            },
+            "p": Object {
+              "a": 0,
+              "k": Array [
+                128,
+                100,
+                0,
+              ],
+            },
+            "r": Object {
+              "a": 0,
+              "k": 0,
+            },
+            "s": Object {
+              "a": 0,
+              "k": Array [
+                100,
+                100,
+                100,
+              ],
+            },
+          },
+          "nm": "Shape Layer 3",
+          "op": 15,
+          "shapes": Array [
+            Object {
+              "cix": 2,
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "Ellipse Path 1",
+                  "p": Object {
+                    "a": 0,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "k": Array [
+                      14.963,
+                      14.963,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "a": 0,
+                    "k": Array [
+                      0.7921569,
+                      0.8156863,
+                      0.8352941,
+                      1,
+                    ],
+                  },
+                  "mn": "ADBE Vector Graphic - Fill",
+                  "nm": "Fill 1",
+                  "o": Object {
+                    "a": 0,
+                    "k": 100,
+                  },
+                  "r": 1,
+                  "ty": "fl",
+                },
+                Object {
+                  "a": Object {
+                    "a": 0,
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "Transform",
+                  "o": Object {
+                    "a": 0,
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "a": 0,
+                    "ix": 2,
+                    "k": Array [
+                      3.481,
+                      -1.019,
+                    ],
+                  },
+                  "r": Object {
+                    "a": 0,
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "a": 0,
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "a": 0,
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "nm": "Ellipse 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 2,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "a": 0,
+              "k": Array [
+                3.481,
+                -1.019,
+                0,
+              ],
+            },
+            "o": Object {
+              "a": 1,
+              "k": Array [
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 3,
+                },
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 6,
+                },
+                Object {
+                  "e": Array [
+                    0,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 9,
+                },
+                Object {
+                  "t": 12,
+                },
+              ],
+            },
+            "p": Object {
+              "a": 0,
+              "k": Array [
+                99.875,
+                100,
+                0,
+              ],
+            },
+            "r": Object {
+              "a": 0,
+              "k": 0,
+            },
+            "s": Object {
+              "a": 0,
+              "k": Array [
+                100,
+                100,
+                100,
+              ],
+            },
+          },
+          "nm": "Shape Layer 1",
+          "op": 15,
+          "shapes": Array [
+            Object {
+              "cix": 2,
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "Ellipse Path 1",
+                  "p": Object {
+                    "a": 0,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "k": Array [
+                      14.963,
+                      14.963,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "a": 0,
+                    "k": Array [
+                      0.7921569,
+                      0.8156863,
+                      0.8352941,
+                      1,
+                    ],
+                  },
+                  "mn": "ADBE Vector Graphic - Fill",
+                  "nm": "Fill 1",
+                  "o": Object {
+                    "a": 0,
+                    "k": 100,
+                  },
+                  "r": 1,
+                  "ty": "fl",
+                },
+                Object {
+                  "a": Object {
+                    "a": 0,
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "Transform",
+                  "o": Object {
+                    "a": 0,
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "a": 0,
+                    "ix": 2,
+                    "k": Array [
+                      3.481,
+                      -1.019,
+                    ],
+                  },
+                  "r": Object {
+                    "a": 0,
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "a": 0,
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "a": 0,
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "nm": "Ellipse 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 3,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "a": 0,
+              "k": Array [
+                3.481,
+                -1.019,
+                0,
+              ],
+            },
+            "o": Object {
+              "a": 1,
+              "k": Array [
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 0,
+                },
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 3,
+                },
+                Object {
+                  "e": Array [
+                    0,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 6,
+                },
+                Object {
+                  "t": 9,
+                },
+              ],
+            },
+            "p": Object {
+              "a": 0,
+              "k": Array [
+                71.75,
+                100,
+                0,
+              ],
+            },
+            "r": Object {
+              "a": 0,
+              "k": 0,
+            },
+            "s": Object {
+              "a": 0,
+              "k": Array [
+                100,
+                100,
+                100,
+              ],
+            },
+          },
+          "nm": "Shape Layer 2",
+          "op": 15,
+          "shapes": Array [
+            Object {
+              "cix": 2,
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "Ellipse Path 1",
+                  "p": Object {
+                    "a": 0,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "k": Array [
+                      14.963,
+                      14.963,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "a": 0,
+                    "k": Array [
+                      0.7921569,
+                      0.8156863,
+                      0.8352941,
+                      1,
+                    ],
+                  },
+                  "mn": "ADBE Vector Graphic - Fill",
+                  "nm": "Fill 1",
+                  "o": Object {
+                    "a": 0,
+                    "k": 100,
+                  },
+                  "r": 1,
+                  "ty": "fl",
+                },
+                Object {
+                  "a": Object {
+                    "a": 0,
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "Transform",
+                  "o": Object {
+                    "a": 0,
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "a": 0,
+                    "ix": 2,
+                    "k": Array [
+                      3.481,
+                      -1.019,
+                    ],
+                  },
+                  "r": Object {
+                    "a": 0,
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "a": 0,
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "a": 0,
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "nm": "Ellipse 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+      ],
+      "nm": "Graph Load",
+      "op": 15,
+      "v": "4.6.3",
+      "w": 200,
+    }
+  }
+  speed={1}
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+/>
+`;
+
+exports[`Loading. Snapshots. should match with default props provided 1`] = `
+<LottieView
+  autoPlay={true}
+  autoSize={false}
+  enableMergePathsAndroidForKitKatAndAbove={false}
+  loop={true}
+  progress={0}
+  resizeMode="contain"
+  source={
+    Object {
+      "assets": Array [],
+      "ddd": 0,
+      "fr": 25,
+      "h": 200,
+      "ip": 0,
+      "layers": Array [
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 1,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "a": 0,
+              "k": Array [
+                3.481,
+                -1.019,
+                0,
+              ],
+            },
+            "o": Object {
+              "a": 1,
+              "k": Array [
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 6,
+                },
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 9,
+                },
+                Object {
+                  "e": Array [
+                    0,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 12,
+                },
+                Object {
+                  "t": 15,
+                },
+              ],
+            },
+            "p": Object {
+              "a": 0,
+              "k": Array [
+                128,
+                100,
+                0,
+              ],
+            },
+            "r": Object {
+              "a": 0,
+              "k": 0,
+            },
+            "s": Object {
+              "a": 0,
+              "k": Array [
+                100,
+                100,
+                100,
+              ],
+            },
+          },
+          "nm": "Shape Layer 3",
+          "op": 15,
+          "shapes": Array [
+            Object {
+              "cix": 2,
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "Ellipse Path 1",
+                  "p": Object {
+                    "a": 0,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "k": Array [
+                      14.963,
+                      14.963,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "a": 0,
+                    "k": Array [
+                      0.7921569,
+                      0.8156863,
+                      0.8352941,
+                      1,
+                    ],
+                  },
+                  "mn": "ADBE Vector Graphic - Fill",
+                  "nm": "Fill 1",
+                  "o": Object {
+                    "a": 0,
+                    "k": 100,
+                  },
+                  "r": 1,
+                  "ty": "fl",
+                },
+                Object {
+                  "a": Object {
+                    "a": 0,
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "Transform",
+                  "o": Object {
+                    "a": 0,
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "a": 0,
+                    "ix": 2,
+                    "k": Array [
+                      3.481,
+                      -1.019,
+                    ],
+                  },
+                  "r": Object {
+                    "a": 0,
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "a": 0,
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "a": 0,
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "nm": "Ellipse 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 2,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "a": 0,
+              "k": Array [
+                3.481,
+                -1.019,
+                0,
+              ],
+            },
+            "o": Object {
+              "a": 1,
+              "k": Array [
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 3,
+                },
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 6,
+                },
+                Object {
+                  "e": Array [
+                    0,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 9,
+                },
+                Object {
+                  "t": 12,
+                },
+              ],
+            },
+            "p": Object {
+              "a": 0,
+              "k": Array [
+                99.875,
+                100,
+                0,
+              ],
+            },
+            "r": Object {
+              "a": 0,
+              "k": 0,
+            },
+            "s": Object {
+              "a": 0,
+              "k": Array [
+                100,
+                100,
+                100,
+              ],
+            },
+          },
+          "nm": "Shape Layer 1",
+          "op": 15,
+          "shapes": Array [
+            Object {
+              "cix": 2,
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "Ellipse Path 1",
+                  "p": Object {
+                    "a": 0,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "k": Array [
+                      14.963,
+                      14.963,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "a": 0,
+                    "k": Array [
+                      0.7921569,
+                      0.8156863,
+                      0.8352941,
+                      1,
+                    ],
+                  },
+                  "mn": "ADBE Vector Graphic - Fill",
+                  "nm": "Fill 1",
+                  "o": Object {
+                    "a": 0,
+                    "k": 100,
+                  },
+                  "r": 1,
+                  "ty": "fl",
+                },
+                Object {
+                  "a": Object {
+                    "a": 0,
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "Transform",
+                  "o": Object {
+                    "a": 0,
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "a": 0,
+                    "ix": 2,
+                    "k": Array [
+                      3.481,
+                      -1.019,
+                    ],
+                  },
+                  "r": Object {
+                    "a": 0,
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "a": 0,
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "a": 0,
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "nm": "Ellipse 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 3,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "a": 0,
+              "k": Array [
+                3.481,
+                -1.019,
+                0,
+              ],
+            },
+            "o": Object {
+              "a": 1,
+              "k": Array [
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 0,
+                },
+                Object {
+                  "e": Array [
+                    100,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 3,
+                },
+                Object {
+                  "e": Array [
+                    0,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    100,
+                  ],
+                  "t": 6,
+                },
+                Object {
+                  "t": 9,
+                },
+              ],
+            },
+            "p": Object {
+              "a": 0,
+              "k": Array [
+                71.75,
+                100,
+                0,
+              ],
+            },
+            "r": Object {
+              "a": 0,
+              "k": 0,
+            },
+            "s": Object {
+              "a": 0,
+              "k": Array [
+                100,
+                100,
+                100,
+              ],
+            },
+          },
+          "nm": "Shape Layer 2",
+          "op": 15,
+          "shapes": Array [
+            Object {
+              "cix": 2,
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "Ellipse Path 1",
+                  "p": Object {
+                    "a": 0,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "k": Array [
+                      14.963,
+                      14.963,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "a": 0,
+                    "k": Array [
+                      0.7921569,
+                      0.8156863,
+                      0.8352941,
+                      1,
+                    ],
+                  },
+                  "mn": "ADBE Vector Graphic - Fill",
+                  "nm": "Fill 1",
+                  "o": Object {
+                    "a": 0,
+                    "k": 100,
+                  },
+                  "r": 1,
+                  "ty": "fl",
+                },
+                Object {
+                  "a": Object {
+                    "a": 0,
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "Transform",
+                  "o": Object {
+                    "a": 0,
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "a": 0,
+                    "ix": 2,
+                    "k": Array [
+                      3.481,
+                      -1.019,
+                    ],
+                  },
+                  "r": Object {
+                    "a": 0,
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "a": 0,
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "a": 0,
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "a": 0,
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "ix": 1,
+              "mn": "ADBE Vector Group",
+              "nm": "Ellipse 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+      ],
+      "nm": "Graph Load",
+      "op": 15,
+      "v": "4.6.3",
+      "w": 200,
+    }
+  }
+  speed={1}
+  style={
+    Object {
+      "height": 75,
+      "width": 75,
+    }
+  }
+/>
+`;

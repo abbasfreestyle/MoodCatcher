@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mood > actionTypes snapshot should match 1`] = `
+Object {
+  "ADD_FEELING": "Mood/ADD_FEELING",
+  "REMOVE_FEELING": "Mood/REMOVE_FEELING",
+  "RESET_EVERYTHING": "Mood/RESET_EVERYTHING",
+  "SET_MOOD": "Mood/SET_MOOD",
+  "UPDATE_COMMENT": "Mood/UPDATE_COMMENT",
+}
+`;

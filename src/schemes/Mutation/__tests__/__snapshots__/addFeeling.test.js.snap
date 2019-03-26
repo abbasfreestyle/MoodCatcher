@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schemes > Mutation > Add Feeling should match the snapshot 1`] = `
+"
+  mutation(
+    $name: String!,
+    $feelingMoodId: ID!
+  ) {
+    createFeeling(input:{
+      name: $name,
+      feelingMoodId: $feelingMoodId
+    }) {
+      id
+      name
+    }
+  }
+"
+`;
