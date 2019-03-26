@@ -37,7 +37,7 @@ or to clear the packager cache and start it
 npm run packager:clear-cache
 ```
 
-and the run a device build.
+and then run a device build.
 
 ## MSCW
 
