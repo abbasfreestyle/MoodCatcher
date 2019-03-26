@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   text: {
-    color: theme.onSecondary,
+    color: theme.onPrimaryVariant,
     fontSize: 18,
     fontWeight: '400',
     textTransform: 'uppercase'
@@ -41,7 +41,7 @@ class Feeling extends PureComponent {
     const { children, onPress, flex, margin, ...touchableProps } = this.props;
     const backgroundColor = this.color.interpolate({
       inputRange: [0, 100],
-      outputRange: [theme.secondary, theme.disabled]
+      outputRange: [theme.primaryVariant, theme.disabled]
     });
     return (
       <Grid.Row margin={margin}>

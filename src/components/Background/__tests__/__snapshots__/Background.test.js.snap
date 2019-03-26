@@ -4,8 +4,8 @@ exports[`Background. Snapshots. should match 1`] = `
 <LinearGradient
   colors={
     Array [
-      "#E0E7ED",
       "#FFFFFF",
+      "#F2FCFB",
     ]
   }
   end={

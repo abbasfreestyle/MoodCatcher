@@ -4,56 +4,58 @@ exports[`Screens > Select Mood Snapshots should match screen 1`] = `
 <View
   flex={1}
 >
-  <Title>
-    Select your mood
-  </Title>
   <FlatList
     ListHeaderComponent={
-      <Column
-        alignItems="center"
-        flex={1}
-        margin={20}
-      >
-        <View
-          marginBottom={-50}
-          marginTop={-75}
+      <View>
+        <Title>
+          Select your mood
+        </Title>
+        <Column
+          alignItems="center"
+          flex={1}
+          margin={20}
         >
-          <Face
-            progress={0.8333333333333334}
-            size={350}
-          />
-        </View>
-        <Row>
-          <Slider
-            animationType="timing"
-            debugTouchArea={false}
-            maximumTrackTintColor="#A073B2"
-            maximumValue={7}
-            minimumTrackTintColor="#D4D4D5"
-            minimumValue={1}
-            onValueChange={[Function]}
-            step={1}
-            style={
-              Object {
-                "flex": 1,
+          <View
+            marginBottom={-50}
+            marginTop={-75}
+          >
+            <Face
+              progress={0.8333333333333334}
+              size={350}
+            />
+          </View>
+          <Row>
+            <Slider
+              animationType="timing"
+              debugTouchArea={false}
+              maximumTrackTintColor="#81DBD1"
+              maximumValue={7}
+              minimumTrackTintColor="#EEEEEE"
+              minimumValue={1}
+              onValueChange={[Function]}
+              step={1}
+              style={
+                Object {
+                  "flex": 1,
+                }
               }
-            }
-            thumbTintColor="#F26AA3"
-            thumbTouchSize={
-              Object {
-                "height": 40,
-                "width": 40,
+              thumbTintColor="#44BBA4"
+              thumbTouchSize={
+                Object {
+                  "height": 40,
+                  "width": 40,
+                }
               }
-            }
-            trackStyle={
-              Object {
-                "height": 5,
+              trackStyle={
+                Object {
+                  "height": 5,
+                }
               }
-            }
-            value={6}
-          />
-        </Row>
-      </Column>
+              value={6}
+            />
+          </Row>
+        </Column>
+      </View>
     }
     data={
       Array [
@@ -76,6 +78,46 @@ exports[`Screens > Select Mood Snapshots should match screen 1`] = `
         Object {
           "id": "5",
           "name": "Relaxed",
+        },
+        Object {
+          "id": "6",
+          "name": "Adventurous",
+        },
+        Object {
+          "id": "7",
+          "name": "Calm",
+        },
+        Object {
+          "id": "8",
+          "name": "Optimistic",
+        },
+        Object {
+          "id": "9",
+          "name": "Generous",
+        },
+        Object {
+          "id": "10",
+          "name": "Loved",
+        },
+        Object {
+          "id": "11",
+          "name": "Hyper",
+        },
+        Object {
+          "id": "12",
+          "name": "Sad",
+        },
+        Object {
+          "id": "13",
+          "name": "Down",
+        },
+        Object {
+          "id": "14",
+          "name": "Lonely",
+        },
+        Object {
+          "id": "15",
+          "name": "Refreshed",
         },
       ]
     }

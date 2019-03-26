@@ -5,43 +5,68 @@ exports[`Item > Activity. Snapshots. should match 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#D4D4D5",
-      "borderRadius": 5,
+      "backgroundColor": "#F2FCFB",
+      "borderRadius": 10,
+      "elevation": 5,
       "flex": 1,
       "justifyContent": "center",
       "margin": 10,
       "minHeight": 50,
+      "shadowColor": "#44BBA4",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 3,
     }
   }
 >
   <Row
-    flex={true}
+    flex={1}
   >
     <View
       alignItems="center"
-      padding={5}
-      width={50}
+      padding={10}
+      width={75}
     >
-      <Face
-        progress={0.8333333333333334}
-        size={75}
-      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 30,
+            "height": 60,
+            "width": 60,
+          }
+        }
+      >
+        <Face
+          progress={0.8333333333333334}
+          size={75}
+        />
+      </View>
     </View>
     <Column
-      flex={true}
+      flex={1}
       justifyContent="center"
       padding={5}
     >
       <Row
-        justifyContent="flex-end"
         padding={5}
       >
-        <Text>
-          Mar 26 - 00:00 AM
+        <Text
+          style={
+            Object {
+              "color": "#393E41",
+            }
+          }
+        >
+          March 26 - 12:00 AM
         </Text>
       </Row>
       <Row
         flexWrap="wrap"
+        padding={5}
       >
         <Chip
           backgroundColor="#FFFFFF"
@@ -54,7 +79,14 @@ exports[`Item > Activity. Snapshots. should match 1`] = `
           text="Happy"
         />
       </Row>
-      <Text>
+      <Text
+        style={
+          Object {
+            "color": "#393E41",
+            "padding": 10,
+          }
+        }
+      >
         Test comment
       </Text>
     </Column>

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.secondary,
+    backgroundColor: theme.surface,
     borderRadius: 20,
     margin: 20,
     shadowColor: theme.shadow,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   text: {
-    color: theme.onSecondary,
+    color: theme.onSurface,
     textAlign: 'center',
     fontSize: 30,
     fontWeight: '400'

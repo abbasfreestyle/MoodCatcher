@@ -10,7 +10,15 @@ import Auth from '@aws-amplify/auth';
 import { listMoods } from 'schemes/Query';
 import { moodPercentage } from 'utils/mood';
 
-import { Item, Title, Face, Grid, Loading, Button } from 'components';
+import {
+  Item,
+  Title,
+  Face,
+  Grid,
+  Loading,
+  Button,
+  ErrorAnimation
+} from 'components';
 
 import theme from 'theme';
 
@@ -19,6 +27,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  averageMood: {
+    fontSize: 20,
+    fontWeight: '400'
+  },
+  mood: {
+    fontSize: 20,
+    fontWeight: '400'
   }
 });
 
@@ -31,7 +47,11 @@ export class DashboardScreen extends Component {
     list: []
   };
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getList();
+  }
+
+  async getList() {
     const { screenProps } = this.props;
     try {
       const { username } = screenProps.authData;
@@ -47,9 +67,11 @@ export class DashboardScreen extends Component {
         0
       );
       const averageMood = Math.round(moodPercentage(moodTotal / entries) * 100);
+      const list = items.sort((a, b) => b.date - a.date);
+
       this.setState({
         loading: false,
-        list: items,
+        list,
         error: !result.data,
         entries,
         averageMood
@@ -69,7 +91,10 @@ export class DashboardScreen extends Component {
     return (
       <View style={styles.container}>
         {this.renderHeader()}
-        <Text>No moods recorded :(</Text>
+        <View flex={1} justifyContent="center" alignItems="center">
+          <Text>No moods recorded :(</Text>
+          <ErrorAnimation />
+        </View>
       </View>
     );
   };
@@ -78,7 +103,10 @@ export class DashboardScreen extends Component {
     return (
       <View style={styles.container}>
         {this.renderHeader()}
-        <Text>Oops! Sorry, something went wrong.</Text>
+        <View flex={1} justifyContent="center" alignItems="center">
+          <Text>Oops! Sorry, something went wrong.</Text>
+          <ErrorAnimation />
+        </View>
       </View>
     );
   };
@@ -86,7 +114,11 @@ export class DashboardScreen extends Component {
   renderHeader() {
     const { screenProps } = this.props;
     return (
-      <Grid.Row justifyContent="space-between" alignItems="center">
+      <Grid.Row
+        justifyContent="space-between"
+        alignItems="center"
+        alignSelf="stretch"
+      >
         <Title>Dashboard</Title>
         <View marginRight={10}>
           <Button.Regular
@@ -130,13 +162,16 @@ export class DashboardScreen extends Component {
               >
                 {fill => <Face size={125} progress={fill / 100} />}
               </AnimatedCircularProgress>
-              <Grid.Column>
+              <Grid.Column alignItems="flex-end">
                 <View>
-                  <Title>Score {averageMood}%</Title>
+                  <Text
+                    style={styles.averageMood}
+                  >{`Your average mood is ${averageMood}%`}</Text>
                 </View>
-                <Title>mood(s) {entries}</Title>
+                <Text style={styles.mood}>{`based on ${entries} entries`}</Text>
               </Grid.Column>
             </Grid.Row>
+            <Title>My Moods</Title>
           </View>
         }
         keyExtractor={item => item.id}

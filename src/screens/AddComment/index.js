@@ -62,9 +62,13 @@ export const AddCommentScreen = props => {
   );
 };
 
+AddCommentScreen.defaultProps = {
+  comment: ''
+};
+
 AddCommentScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
-  comment: PropTypes.string.isRequired,
+  comment: PropTypes.string,
   onUpdateComment: PropTypes.func.isRequired
 };
 

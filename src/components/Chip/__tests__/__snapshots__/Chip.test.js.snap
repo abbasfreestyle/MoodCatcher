@@ -2,7 +2,7 @@
 
 exports[`Chip. Snapshots. should match default props 1`] = `
 Object {
-  "backgroundColor": "#D4D4D5",
+  "backgroundColor": "#EEEEEE",
 }
 `;
 
@@ -66,7 +66,7 @@ exports[`Chip. Snapshots. should match with default props provided 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "backgroundColor": "#D4D4D5",
+          "backgroundColor": "#EEEEEE",
         },
       ]
     }

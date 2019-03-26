@@ -22,5 +22,45 @@ Array [
     "id": "5",
     "name": "Relaxed",
   },
+  Object {
+    "id": "6",
+    "name": "Adventurous",
+  },
+  Object {
+    "id": "7",
+    "name": "Calm",
+  },
+  Object {
+    "id": "8",
+    "name": "Optimistic",
+  },
+  Object {
+    "id": "9",
+    "name": "Generous",
+  },
+  Object {
+    "id": "10",
+    "name": "Loved",
+  },
+  Object {
+    "id": "11",
+    "name": "Hyper",
+  },
+  Object {
+    "id": "12",
+    "name": "Sad",
+  },
+  Object {
+    "id": "13",
+    "name": "Down",
+  },
+  Object {
+    "id": "14",
+    "name": "Lonely",
+  },
+  Object {
+    "id": "15",
+    "name": "Refreshed",
+  },
 ]
 `;

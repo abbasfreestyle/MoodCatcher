@@ -9,6 +9,7 @@ Object {
     "Regular": [Function],
   },
   "Chip": [Function],
+  "ErrorAnimation": [Function],
   "Face": [Function],
   "Grid": Object {
     "Column": [Function],

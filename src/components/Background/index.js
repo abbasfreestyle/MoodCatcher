@@ -19,7 +19,7 @@ const Background = props => {
   return (
     <LinearGradient
       style={styles.container}
-      colors={[theme.background, theme.surface]}
+      colors={[theme.surface, theme.secondary]}
       {...linearGradientProps}
     >
       {children}

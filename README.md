@@ -37,6 +37,8 @@ npm install
 
 ### Should Have
 
+- Staging and prod environments (project is too small)
+- Git branching management (project is too small)
 - Snapshot testing (done)
 - unit testing (done)
 - Theming (done)
@@ -51,6 +53,6 @@ npm install
 
 ### Would Have
 
-- Pretty chart to display weekly activity (did no start)
+- Pretty chart to display weekly activity (did not start)
 
 Enjoy.

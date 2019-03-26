@@ -30,30 +30,32 @@ export const SelectMoodScreen = props => {
   const { mood, feelings, navigation, onSetMood } = props;
   return (
     <View flex={1}>
-      <Title>Select your mood</Title>
       <FlatList
         ListHeaderComponent={
-          <Grid.Column flex={1} margin={20} alignItems="center">
-            <View marginTop={-75} marginBottom={-50}>
-              <Face progress={moodPercentage(mood)} size={350} />
-            </View>
-            <Grid.Row>
-              <Slider
-                value={mood}
-                style={styles.slider}
-                trackStyle={styles.track}
-                minimumValue={minRange}
-                maximumValue={maxRange}
-                step={1}
-                thumbTintColor={theme.secondary}
-                minimumTrackTintColor={theme.disabled}
-                maximumTrackTintColor={theme.primary}
-                onValueChange={val => {
-                  onSetMood(val);
-                }}
-              />
-            </Grid.Row>
-          </Grid.Column>
+          <View>
+            <Title>Select your mood</Title>
+            <Grid.Column flex={1} margin={20} alignItems="center">
+              <View marginTop={-75} marginBottom={-50}>
+                <Face progress={moodPercentage(mood)} size={350} />
+              </View>
+              <Grid.Row>
+                <Slider
+                  value={mood}
+                  style={styles.slider}
+                  trackStyle={styles.track}
+                  minimumValue={minRange}
+                  maximumValue={maxRange}
+                  step={1}
+                  thumbTintColor={theme.primary}
+                  minimumTrackTintColor={theme.disabled}
+                  maximumTrackTintColor={theme.primaryVariant}
+                  onValueChange={val => {
+                    onSetMood(val);
+                  }}
+                />
+              </Grid.Row>
+            </Grid.Column>
+          </View>
         }
         keyExtractor={item => item.id}
         numColumns={2}

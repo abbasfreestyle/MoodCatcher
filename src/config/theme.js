@@ -1,41 +1,26 @@
 const palette = {
-  white: '#FFFFFF',
-  mystic: '#E0E7ED',
-  iron: '#D4D4D5',
+  charcoal: '#393E41',
   trout: '#4A4C58',
-  limedSpruce: '#323C48',
-  tuna: '#393C46',
-  black: '#000000',
-  brilliantRose: '#F26AA3',
-  buttercup: '#F6B21B',
-  red: '#FF0000',
-  monza: '#B3001E',
-  redDamask: '#D65E49',
-  java: '#1EB8C3',
-  turquoiseBlue: '#67EEA1',
-  wisteria: '#A073B2',
-  shakespeare: '#4895D0'
+  darkGreen: '#44BBA4',
+  calmBlue: '#81DBD1',
+  brightGreen: '#F2FCFB',
+  grey: '#EEEEEE',
+  white: '#FFFFFF'
 };
 
 const theme = {
-  primary: palette.wisteria,
-  primaryVariant: palette.trout,
-  secondary: palette.brilliantRose,
-
-  background: palette.mystic,
+  primary: palette.darkGreen,
+  primaryVariant: palette.calmBlue,
+  secondary: palette.brightGreen,
   surface: palette.white,
-  error: palette.monza,
 
   onPrimary: palette.white,
-  onPrimaryAlt: palette.white,
-  onPrimaryVariant: palette.iron,
-  onSecondary: palette.white,
-  onBackground: palette.limedSpruce,
-  onSurface: palette.limedSpruce,
-  onError: palette.white,
+  onPrimaryVariant: palette.white,
+  onSecondary: palette.charcoal,
+  onSurface: palette.trout,
 
-  shadow: palette.black,
-  disabled: palette.iron
+  shadow: palette.darkGreen,
+  disabled: palette.grey
 };
 
 export default theme;

@@ -7,6 +7,7 @@ import Chip from './Chip';
 import Face from './Face';
 import Loading from './Loading';
 import Background from './Background';
+import ErrorAnimation from './ErrorAnimation';
 
 export {
   Touchable,
@@ -17,5 +18,6 @@ export {
   Chip,
   Face,
   Loading,
-  Background
+  Background,
+  ErrorAnimation
 };

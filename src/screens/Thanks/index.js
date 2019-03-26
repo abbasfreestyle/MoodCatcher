@@ -13,9 +13,8 @@ import { resetEverything } from 'modules/Mood/actions';
 import { selectPostData } from 'modules/Mood/selectors';
 
 import success from 'assets/animations/success.json';
-import errorAnimation from 'assets/animations/error.json';
 
-import { Title, Button, Loading } from 'components';
+import { Title, Button, Loading, ErrorAnimation } from 'components';
 
 const styles = StyleSheet.create({
   container: {
@@ -99,12 +98,11 @@ export class ThanksScreen extends Component {
           <Text>Something went wrong.</Text>
         </View>
         <View flex={1} justifyContent="center" alignItems="center">
-          <LottieView autoPlay source={errorAnimation} />
+          <ErrorAnimation />
         </View>
         <View flex={1} alignItems="center">
           <Button.Regular
             onPress={() => navigation.navigate('SelectMood')}
-            flex
             margin={10}
           >
             Back to the beginning

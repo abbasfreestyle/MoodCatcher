@@ -19,7 +19,7 @@ exports[`Button > Regular. Snapshots. should match when disabled is true 1`] = `
       borderRadius={5}
       disabled={true}
       onPress={[MockFunction]}
-      rippleColor="white"
+      rippleColor="#FFFFFF"
     >
       <AnimatedComponent
         pointerEvents="box-only"
@@ -31,7 +31,7 @@ exports[`Button > Regular. Snapshots. should match when disabled is true 1`] = `
               "padding": 10,
             },
             Object {
-              "backgroundColor": "rgba(212, 212, 213, 1)",
+              "backgroundColor": "rgba(238, 238, 238, 1)",
             },
           ]
         }
@@ -65,7 +65,7 @@ exports[`Button > Regular. Snapshots. should match when flex is true 1`] = `
       borderRadius={5}
       disabled={false}
       onPress={[MockFunction]}
-      rippleColor="white"
+      rippleColor="#FFFFFF"
     >
       <AnimatedComponent
         pointerEvents="box-only"
@@ -77,7 +77,7 @@ exports[`Button > Regular. Snapshots. should match when flex is true 1`] = `
               "padding": 10,
             },
             Object {
-              "backgroundColor": "rgba(160, 115, 178, 1)",
+              "backgroundColor": "rgba(68, 187, 164, 1)",
             },
           ]
         }
@@ -111,7 +111,7 @@ exports[`Button > Regular. Snapshots. should match when margin is different 1`] 
       borderRadius={5}
       disabled={false}
       onPress={[MockFunction]}
-      rippleColor="white"
+      rippleColor="#FFFFFF"
     >
       <AnimatedComponent
         pointerEvents="box-only"
@@ -123,7 +123,7 @@ exports[`Button > Regular. Snapshots. should match when margin is different 1`] 
               "padding": 10,
             },
             Object {
-              "backgroundColor": "rgba(160, 115, 178, 1)",
+              "backgroundColor": "rgba(68, 187, 164, 1)",
             },
           ]
         }
@@ -157,7 +157,7 @@ exports[`Button > Regular. Snapshots. should match with default props provided 1
       borderRadius={5}
       disabled={false}
       onPress={[MockFunction]}
-      rippleColor="white"
+      rippleColor="#FFFFFF"
     >
       <AnimatedComponent
         pointerEvents="box-only"
@@ -169,7 +169,7 @@ exports[`Button > Regular. Snapshots. should match with default props provided 1
               "padding": 10,
             },
             Object {
-              "backgroundColor": "rgba(160, 115, 178, 1)",
+              "backgroundColor": "rgba(68, 187, 164, 1)",
             },
           ]
         }

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: theme.primary,
-    fontWeight: '500',
+    fontWeight: '400',
     fontSize: 30
   }
 });

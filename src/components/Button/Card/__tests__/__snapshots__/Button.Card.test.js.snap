@@ -5,13 +5,13 @@ exports[`Button > Card. Snapshots. should match 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#F26AA3",
+      "backgroundColor": "#FFFFFF",
       "borderRadius": 20,
       "elevation": 5,
       "flex": 1,
       "justifyContent": "center",
       "margin": 20,
-      "shadowColor": "#000000",
+      "shadowColor": "#44BBA4",
       "shadowOffset": Object {
         "height": 2,
         "width": 0,
@@ -24,7 +24,7 @@ exports[`Button > Card. Snapshots. should match 1`] = `
   <Touchable
     borderRadius={20}
     onPress={[MockFunction]}
-    rippleColor="white"
+    rippleColor="#44BBA4"
   >
     <View
       style={
@@ -38,7 +38,7 @@ exports[`Button > Card. Snapshots. should match 1`] = `
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#4A4C58",
             "fontSize": 30,
             "fontWeight": "400",
             "textAlign": "center",

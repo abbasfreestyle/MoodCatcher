@@ -47,7 +47,6 @@
     "prop-types": "15.7.2",
     "react": "16.8.3",
     "react-native": "0.59.1",
-    "react-native-chart-kit": "2.4.0",
     "react-native-circular-progress": "1.1.0",
     "react-native-gesture-handler": "1.1.0",
     "react-native-linear-gradient": "2.5.4",

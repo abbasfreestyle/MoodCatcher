@@ -12,6 +12,7 @@ exports[`Screens > Dashboard Snapshots should match when error is true 1`] = `
 >
   <Row
     alignItems="center"
+    alignSelf="stretch"
     justifyContent="space-between"
   >
     <Title>
@@ -30,9 +31,16 @@ exports[`Screens > Dashboard Snapshots should match when error is true 1`] = `
       </Regular>
     </View>
   </Row>
-  <Text>
-    Oops! Sorry, something went wrong.
-  </Text>
+  <View
+    alignItems="center"
+    flex={1}
+    justifyContent="center"
+  >
+    <Text>
+      Oops! Sorry, something went wrong.
+    </Text>
+    <ErrorAnimation />
+  </View>
 </View>
 `;
 
@@ -48,6 +56,7 @@ exports[`Screens > Dashboard Snapshots should match when list is empty 1`] = `
 >
   <Row
     alignItems="center"
+    alignSelf="stretch"
     justifyContent="space-between"
   >
     <Title>
@@ -66,9 +75,16 @@ exports[`Screens > Dashboard Snapshots should match when list is empty 1`] = `
       </Regular>
     </View>
   </Row>
-  <Text>
-    No moods recorded :(
-  </Text>
+  <View
+    alignItems="center"
+    flex={1}
+    justifyContent="center"
+  >
+    <Text>
+      No moods recorded :(
+    </Text>
+    <ErrorAnimation />
+  </View>
 </View>
 `;
 
@@ -78,6 +94,7 @@ exports[`Screens > Dashboard Snapshots should match when list is not empty 1`] =
     <View>
       <Row
         alignItems="center"
+        alignSelf="stretch"
         justifyContent="space-between"
       >
         <Title>
@@ -102,7 +119,7 @@ exports[`Screens > Dashboard Snapshots should match when list is not empty 1`] =
       >
         <AnimatedCircularProgress
           arcSweepAngle={270}
-          backgroundColor="#D4D4D5"
+          backgroundColor="#EEEEEE"
           duration={500}
           easing={[Function]}
           fill={75}
@@ -110,25 +127,41 @@ exports[`Screens > Dashboard Snapshots should match when list is not empty 1`] =
           prefill={0}
           rotation={-135}
           size={100}
-          tintColor="#A073B2"
+          tintColor="#44BBA4"
           width={10}
         >
           [Function]
         </AnimatedCircularProgress>
-        <Column>
+        <Column
+          alignItems="flex-end"
+        >
           <View>
-            <Title>
-              Score 
-              75
-              %
-            </Title>
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "fontWeight": "400",
+                }
+              }
+            >
+              Your average mood is 75%
+            </Text>
           </View>
-          <Title>
-            mood(s) 
-            1
-          </Title>
+          <Text
+            style={
+              Object {
+                "fontSize": 20,
+                "fontWeight": "400",
+              }
+            }
+          >
+            based on 1 entries
+          </Text>
         </Column>
       </Row>
+      <Title>
+        My Moods
+      </Title>
     </View>
   }
   data={
@@ -191,6 +224,7 @@ exports[`Screens > Dashboard Snapshots should match with default state 1`] = `
 >
   <Row
     alignItems="center"
+    alignSelf="stretch"
     justifyContent="space-between"
   >
     <Title>
@@ -209,8 +243,15 @@ exports[`Screens > Dashboard Snapshots should match with default state 1`] = `
       </Regular>
     </View>
   </Row>
-  <Text>
-    Oops! Sorry, something went wrong.
-  </Text>
+  <View
+    alignItems="center"
+    flex={1}
+    justifyContent="center"
+  >
+    <Text>
+      Oops! Sorry, something went wrong.
+    </Text>
+    <ErrorAnimation />
+  </View>
 </View>
 `;

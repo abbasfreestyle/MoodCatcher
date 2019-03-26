@@ -11,9 +11,9 @@ exports[`Title. Snapshots. should match 1`] = `
   <Text
     style={
       Object {
-        "color": "#A073B2",
+        "color": "#44BBA4",
         "fontSize": 30,
-        "fontWeight": "500",
+        "fontWeight": "400",
       }
     }
   >

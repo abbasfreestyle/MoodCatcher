@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   text: {
-    color: theme.onSecondary,
+    color: theme.onPrimary,
     fontSize: 18,
     fontWeight: '400',
     textTransform: 'uppercase'
@@ -49,6 +49,7 @@ class Regular extends PureComponent {
           <Touchable
             disabled={disabled}
             onPress={onPress}
+            rippleColor={theme.onPrimary}
             borderRadius={5}
             {...props}
           >
