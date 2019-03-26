@@ -25,7 +25,7 @@ npm install
 
 Incase if the packager is not connecting with the device, you may need to start the packager manually. I only seem to be facing this with RN 0.59.
 
-You could do either of the following.
+You could do either of the following:
 
 ```bash
 npm start
