@@ -59,6 +59,7 @@ and then run a device build.
 - Git branching management (project is too small)
 - Snapshot testing (done)
 - Unit testing (done)
+- Documentation (only essentials provided, but would have liked to cover this everywhere)
 - Theming (done)
 - Authentication via AWS cognito (done)
 - Filter dashboard list via time (did not start)
