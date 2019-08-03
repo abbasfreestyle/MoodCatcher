@@ -2,6 +2,8 @@
 
 A basic app that lets you login, save your moods and view a history of your entries.
 
+Technical test: Completed in 4 days
+
 ## Getting Started
 
 1. Clone this repo
