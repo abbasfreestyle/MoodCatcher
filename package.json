@@ -81,7 +81,7 @@
     "jest": "24.5.0",
     "jest-cli": "24.5.0",
     "jest-enzyme": "7.0.2",
-    "lint-staged": "8.1.5",
+    "lint-staged": "13.1.0",
     "metro-react-native-babel-preset": "0.53.1",
     "prettier": "1.16.4",
     "react-dom": "16.8.5",
